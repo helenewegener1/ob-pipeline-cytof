@@ -14,3 +14,4 @@ dependencies:
       - "scipy==1.14.1"
       - "genieclust==1.1.6"
       - "pandas==2.2.3"
+      - "fcsparser==0.2.8"
