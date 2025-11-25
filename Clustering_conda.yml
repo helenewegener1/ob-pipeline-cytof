@@ -59,7 +59,7 @@ stages:
       - id: data.raw
         path: "{input}/{stage}/{module}/{params}/{dataset}.data.gz"
       - id: data.labels
-        path: "{input}/{stage}/{module}/{params}/{dataset}.labels.gz"
+        path: "{input}/{stage}/{module}/{params}/{dataset}.input_labels.gz"
   - id: preprocessing
     modules:
       - id: data_preprocessing
