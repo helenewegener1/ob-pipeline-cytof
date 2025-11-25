@@ -6,6 +6,8 @@ dependencies:
   - conda-forge::python=3.12.6
   - conda-forge::pip
   - conda-forge::scikit-bio=0.6.2
+  - conda-forge::pytorch=2.3.1
+  - conda-forge::torchvision=0.18.1
   - pip:
       #- "clustering-benchmarks==1.1.5"
       - "https://github.com/gagolews/clustering-benchmarks/releases/download/v1.1.5/clustering_benchmarks-1.1.5.tar.gz"
@@ -23,6 +25,4 @@ dependencies:
       - "scikit-learn==1.5.2"
       - "scikit-plot==0.3.7"
       - "umap-learn==0.4.6"
-      - "pytorch==2.3.1"
-      - "torchvision==0.18.1"
       - "tensorboard==2.3.0"
