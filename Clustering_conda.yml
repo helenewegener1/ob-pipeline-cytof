@@ -12,6 +12,10 @@ software_environments:
     description: "clustbench on py3.12.6"
     conda: envs/py.yml
     envmodule: py
+  py-old:
+    description: "clustbench on py3.12.6"
+    conda: envs/py-old.yml
+    envmodule: py-old
   cran:
     description: "CRAN R environment"
     conda: envs/cran.yml
@@ -80,7 +84,7 @@ stages:
     modules:
       - id: dgcytof
         name: "DG-CyTOF"
-        software_environment: "py"
+        software_environment: "py-old"
         repository:
           url: https://github.com/kaae-2/ob-pipeline-dgcytof
           commit: 7a53198
