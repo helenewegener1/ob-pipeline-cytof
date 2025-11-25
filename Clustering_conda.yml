@@ -87,7 +87,7 @@ stages:
         software_environment: "py"
         repository:
           url: https://github.com/kaae-2/ob-pipeline-dgcytof
-          commit: 0eca09e
+          commit: 0be7872
         parameters:
           # - values: [] #TODO: Add parameters
         inputs:
