@@ -80,23 +80,23 @@ stages:
       - id: data.true_labels
         path: "{input}/{stage}/{module}/{params}/{dataset}.true_labels.gz"
 
-  - id: analysis
-    modules:
-      - id: dgcytof
-        name: "DG-CyTOF"
-        software_environment: "py-old"
-        repository:
-          url: https://github.com/kaae-2/ob-pipeline-dgcytof
-          commit: 7a53198
-        parameters:
-          # - values: [] #TODO: Add parameters
-        inputs:
-          - entries:
-              - data.matrix
-              - data.true_labels
-        outputs:
-          - id: analysis.prediction
-            path: "{input}/{stage}/{module}/{params}/{dataset}.labels.gz"
+  # - id: analysis
+  #   modules:
+  #     - id: dgcytof
+  #       name: "DG-CyTOF"
+  #       software_environment: "py-old"
+  #       repository:
+  #         url: https://github.com/kaae-2/ob-pipeline-dgcytof
+  #         commit: 7a53198
+  #       parameters:
+  #         # - values: [] #TODO: Add parameters
+  #       inputs:
+  #         - entries:
+  #             - data.matrix
+  #             - data.true_labels
+  #       outputs:
+  #         - id: analysis.prediction
+  #           path: "{input}/{stage}/{module}/{params}/{dataset}.labels.gz"
   # - id: metrics
   #   modules:
   #     - id: flow_metrics
