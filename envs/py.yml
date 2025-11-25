@@ -5,6 +5,7 @@ channels:
 dependencies:
   - conda-forge::python=3.12.6
   - conda-forge::pip
+  - conda-forge::scikit-bio=0.6.2
   - pip:
       #- "clustering-benchmarks==1.1.5"
       - "https://github.com/gagolews/clustering-benchmarks/releases/download/v1.1.5/clustering_benchmarks-1.1.5.tar.gz"
@@ -21,7 +22,6 @@ dependencies:
       - "hdbscan==0.8.26"
       - "scikit-learn==1.5.2"
       - "scikit-plot==0.3.7"
-      - "scikit_bio==0.5.6"
       - "umap-learn==0.4.6"
       - "pytorch==2.3.1"
       - "torchvision==0.18.1"
