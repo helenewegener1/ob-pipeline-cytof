@@ -41,8 +41,8 @@ stages:
         name: "CyTOF dataset from this place http://flowrepository.org/experiments/817/download_ziped_files"
         software_environment: "py"
         repository:
-          url: https://github.com/kaae-2/ob-flow-datasets
-          commit: 6a34a95
+          url: https://github.com/kaae-2/ob-pipeline-data
+          commit: 5a6523f
         parameters:
           - values: ["--dataset_name", "Levine_13dim", "--transformed", "false"]
           # - values: ["--dataset_name", "Levine_13dim", "--transformed", "true"]
