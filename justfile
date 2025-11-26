@@ -17,4 +17,4 @@ push:
     git add . && git commit -m "update" && git push
 
 ob-start:
-    conda activate omnibenchmark
+    cd .. && conda activate omnibenchmark && cd cytof-benchmark
