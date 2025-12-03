@@ -108,6 +108,14 @@ stages:
           url: https://github.com/JavierHdCKU/ob-pipeline-cyanno
           commit: d45303799244b31e99a9ef4d8b16bc8fbff8befa
         parameters: []
+      
+      - id: random
+        name: "Random"
+        software_environment: cran
+        repository:
+          url: https://github.com/helenewegener1/benchmark_random
+          commit: dcab3e73efc898cd026d37e0721db4a76b007d3c
+        parameters: []
 
     outputs:
       - id: analysis.prediction
