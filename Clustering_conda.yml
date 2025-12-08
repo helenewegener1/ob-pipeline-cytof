@@ -49,7 +49,7 @@ stages:
           url: https://github.com/kaae-2/ob-pipeline-data
           commit: 9a115ab
         parameters:
-          #- values: ["--dataset_name", "Levine_13dim", "--transformed", "false"] # works
+          - values: ["--dataset_name", "Levine_13dim", "--transformed", "false"] # works
           # - values: ["--dataset_name", "Levine_13dim", "--transformed", "true"]
           # - values: ["--dataset_name", "Levine_32dim", "--transformed", "false"] # works
           # - values: ["--dataset_name", "Levine_32dim", "--transformed", "true"]
@@ -59,7 +59,7 @@ stages:
           # - values: ["--dataset_name", "Nilsson_rare", "--transformed", "true"]
           # - values: ["--dataset_name", "Samusik_01", "--transformed", "false"]
           # - values: ["--dataset_name", "Samusik_01", "--transformed", "true"]
-          - values: ["--dataset_name", "covid", "--transformed", "false"]
+          # - values: ["--dataset_name", "covid", "--transformed", "false"]
           # - values: ["--dataset_name", "", "--transformed", "false"] #Template
     outputs:
       - id: data.raw

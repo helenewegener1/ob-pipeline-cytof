@@ -1,0 +1,137 @@
+2025-12-08 10:38:22 [INFO] Assuming unrestricted shared filesystem usage.
+2025-12-08 10:38:22 [INFO] None
+2025-12-08 10:38:22 [INFO] host: ubuntu-32gb-nbg1-1
+2025-12-08 10:38:22 [INFO] Building DAG of jobs...
+2025-12-08 10:38:23 [WARNING] Your conda installation is not configured to use strict channel priorities. This is however important for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+2025-12-08 10:38:23 [INFO] Creating conda environment envs/cyanno_env.yml...
+2025-12-08 10:38:23 [INFO] Downloading and installing remote packages.
+2025-12-08 10:38:43 [INFO] Cleaning up conda package tarballs.
+2025-12-08 10:38:43 [INFO] Environment for /home/helene/benchmarks/ob-pipeline-cytof/envs/cyanno_env.yml created (location: .snakemake/conda/92822264f40461346830db80ddb755db_)
+2025-12-08 10:38:43 [INFO] Creating conda environment envs/py.yml...
+2025-12-08 10:38:43 [INFO] Downloading and installing remote packages.
+2025-12-08 10:39:20 [INFO] Cleaning up conda package tarballs.
+2025-12-08 10:39:21 [INFO] Environment for /home/helene/benchmarks/ob-pipeline-cytof/envs/py.yml created (location: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_)
+2025-12-08 10:39:21 [INFO] Creating conda environment envs/cran.yml...
+2025-12-08 10:39:21 [INFO] Downloading and installing remote packages.
+2025-12-08 10:39:39 [INFO] Cleaning up conda package tarballs.
+2025-12-08 10:39:39 [INFO] Environment for /home/helene/benchmarks/ob-pipeline-cytof/envs/cran.yml created (location: .snakemake/conda/0e199521e37e818cadfa5b4513af5b84_)
+2025-12-08 10:39:39 [INFO] Using shell: /usr/bin/bash
+2025-12-08 10:39:39 [INFO] Provided cores: 1 (use --cores to define parallelism)
+2025-12-08 10:39:39 [INFO] Rules claiming more threads will be scaled down.
+2025-12-08 10:39:39 [INFO] Job stats:
+job                                                                                       count
+--------------------------------------------------------------------------------------  -------
+all                                                                                           1
+analysis_cyanno_default                                                                       1
+analysis_dgcytof_default                                                                      1
+analysis_random_default                                                                       1
+data_data_import_.3cb61bae4bf221e57ad472638ee12527a527aa17af09b936e5e538a2252d91a3            1
+metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010        3
+preprocessing_data_preprocessing_default                                                      1
+total                                                                                         9
+
+2025-12-08 10:39:39 [INFO] Select jobs to execute...
+2025-12-08 10:39:39 [INFO] Execute 1 jobs...
+2025-12-08 10:39:39 [INFO]  Rule: data_data_import_.3cb61bae4bf221e57ad472638ee12527a527aa17af09b936e5e538a2252d91a3, Jobid: 1
+2025-12-08 10:39:39 [INFO] Shell command: None
+2025-12-08 10:39:39 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-08 10:39:40 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-08 10:39:42 [ERROR] RuleException:
+CalledProcessError in file "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/site-packages/omnibenchmark/workflow/snakemake/rules/rule_node.smk", line 61:
+Command 'source /home/helene/miniforge3/bin/activate '/home/helene/benchmarks/ob-pipeline-cytof/.snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_'; set -euo pipefail;  python /home/helene/benchmarks/ob-pipeline-cytof/.snakemake/scripts/tmp7fb25iwv.run_module.py' returned non-zero exit status 1.
+2025-12-08 10:39:42 [ERROR] Error in rule data_data_import_.3cb61bae4bf221e57ad472638ee12527a527aa17af09b936e5e538a2252d91a3, jobid: 1
+2025-12-08 10:39:42 [INFO] Shutting down, this might take some time.
+2025-12-08 10:39:42 [ERROR] Exiting because a job execution failed. Look below for error messages
+2025-12-08 10:39:42 [ERROR] Error in rule data_data_import_.3cb61bae4bf221e57ad472638ee12527a527aa17af09b936e5e538a2252d91a3, jobid: 1
+2025-12-08 10:39:42 [INFO] Complete log(s): /home/helene/benchmarks/ob-pipeline-cytof/.snakemake/log/2025-12-08T103822.742161.snakemake.log
+2025-12-08 10:39:42 [ERROR] WorkflowError:
+At least one job did not complete successfully.
+2025-12-08 10:39:42 [ERROR] Benchmark run has failed.
+2025-12-08 10:40:41 [INFO] Assuming unrestricted shared filesystem usage.
+2025-12-08 10:40:41 [INFO] None
+2025-12-08 10:40:41 [INFO] host: ubuntu-32gb-nbg1-1
+2025-12-08 10:40:41 [INFO] Building DAG of jobs...
+2025-12-08 10:40:42 [WARNING] Your conda installation is not configured to use strict channel priorities. This is however important for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+2025-12-08 10:40:42 [INFO] Using shell: /usr/bin/bash
+2025-12-08 10:40:42 [INFO] Provided cores: 1 (use --cores to define parallelism)
+2025-12-08 10:40:42 [INFO] Rules claiming more threads will be scaled down.
+2025-12-08 10:40:42 [INFO] Job stats:
+job                                                                                       count
+--------------------------------------------------------------------------------------  -------
+all                                                                                           1
+analysis_cyanno_default                                                                       1
+analysis_dgcytof_default                                                                      1
+analysis_random_default                                                                       1
+data_data_import_.39e04c32bfe741dadaaa3fc7842586f32079c7042a399c9ffb6316987a4d6666            1
+metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010        3
+preprocessing_data_preprocessing_default                                                      1
+total                                                                                         9
+
+2025-12-08 10:40:42 [INFO] Select jobs to execute...
+2025-12-08 10:40:42 [INFO] Execute 1 jobs...
+2025-12-08 10:40:42 [INFO]  Rule: data_data_import_.39e04c32bfe741dadaaa3fc7842586f32079c7042a399c9ffb6316987a4d6666, Jobid: 1
+2025-12-08 10:40:42 [INFO] Shell command: None
+2025-12-08 10:40:42 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-08 10:40:42 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-08 10:40:45 [INFO] Finished jobid: 1 (Rule: data_data_import_.39e04c32bfe741dadaaa3fc7842586f32079c7042a399c9ffb6316987a4d6666)
+2025-12-08 10:40:45 [INFO] None
+2025-12-08 10:40:45 [INFO] Select jobs to execute...
+2025-12-08 10:40:45 [INFO] Execute 1 jobs...
+2025-12-08 10:40:45 [INFO]  Rule: preprocessing_data_preprocessing_default, Jobid: 3
+2025-12-08 10:40:45 [INFO] Shell command: None
+2025-12-08 10:40:45 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-08 10:40:45 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-08 10:40:51 [INFO] Finished jobid: 3 (Rule: preprocessing_data_preprocessing_default)
+2025-12-08 10:40:51 [INFO] None
+2025-12-08 10:40:51 [INFO] Select jobs to execute...
+2025-12-08 10:40:51 [INFO] Execute 3 jobs...
+2025-12-08 10:40:51 [INFO]  Rule: analysis_dgcytof_default, Jobid: 5
+2025-12-08 10:40:51 [INFO] Shell command: None
+2025-12-08 10:40:51 [INFO]  Rule: analysis_random_default, Jobid: 7
+2025-12-08 10:40:51 [INFO] Shell command: None
+2025-12-08 10:40:51 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-08 10:40:51 [INFO]  Rule: analysis_cyanno_default, Jobid: 2
+2025-12-08 10:40:51 [INFO] Shell command: None
+2025-12-08 10:40:51 [INFO] Activating conda environment: .snakemake/conda/0e199521e37e818cadfa5b4513af5b84_
+2025-12-08 10:40:51 [INFO] Activating conda environment: .snakemake/conda/92822264f40461346830db80ddb755db_
+2025-12-08 10:40:52 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-08 10:40:52 [INFO] Activating conda environment: .snakemake/conda/92822264f40461346830db80ddb755db_
+2025-12-08 10:40:52 [INFO] Activating conda environment: .snakemake/conda/0e199521e37e818cadfa5b4513af5b84_
+2025-12-08 10:40:55 [INFO] Finished jobid: 7 (Rule: analysis_random_default)
+2025-12-08 10:40:55 [INFO] None
+2025-12-08 10:40:55 [INFO] Select jobs to execute...
+2025-12-08 10:40:55 [INFO] Execute 1 jobs...
+2025-12-08 10:40:55 [INFO]  Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010, Jobid: 8
+2025-12-08 10:40:55 [INFO] Shell command: None
+2025-12-08 10:40:55 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-08 10:40:55 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-08 10:40:56 [INFO] Finished jobid: 2 (Rule: analysis_cyanno_default)
+2025-12-08 10:40:56 [INFO] None
+2025-12-08 10:40:56 [INFO] Select jobs to execute...
+2025-12-08 10:40:56 [INFO] Execute 1 jobs...
+2025-12-08 10:40:56 [INFO]  Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010, Jobid: 4
+2025-12-08 10:40:56 [INFO] Shell command: None
+2025-12-08 10:40:56 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-08 10:40:56 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-08 10:40:57 [INFO] Finished jobid: 8 (Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010)
+2025-12-08 10:40:57 [INFO] None
+2025-12-08 10:40:58 [INFO] Finished jobid: 4 (Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010)
+2025-12-08 10:40:58 [INFO] None
+2025-12-08 10:41:17 [INFO] Finished jobid: 5 (Rule: analysis_dgcytof_default)
+2025-12-08 10:41:17 [INFO] None
+2025-12-08 10:41:17 [INFO] Select jobs to execute...
+2025-12-08 10:41:17 [INFO] Execute 1 jobs...
+2025-12-08 10:41:17 [INFO]  Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010, Jobid: 6
+2025-12-08 10:41:17 [INFO] Shell command: None
+2025-12-08 10:41:17 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-08 10:41:18 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-08 10:41:20 [INFO] Finished jobid: 6 (Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010)
+2025-12-08 10:41:20 [INFO] None
+2025-12-08 10:41:20 [INFO] Select jobs to execute...
+2025-12-08 10:41:20 [INFO] Execute 1 jobs...
+2025-12-08 10:41:20 [INFO]  Rule: all, Jobid: 0
+2025-12-08 10:41:20 [INFO] Shell command: None
+2025-12-08 10:41:22 [INFO] Finished jobid: 0 (Rule: all)
+2025-12-08 10:41:22 [INFO] None
+2025-12-08 10:41:22 [INFO] Complete log(s): /home/helene/benchmarks/ob-pipeline-cytof/.snakemake/log/2025-12-08T104041.163555.snakemake.log
+2025-12-08 10:41:22 [INFO] Benchmark run has finished successfully.
