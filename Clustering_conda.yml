@@ -49,9 +49,9 @@ stages:
           url: https://github.com/kaae-2/ob-pipeline-data
           commit: 9a115ab
         parameters:
-          - values: ["--dataset_name", "Levine_13dim", "--transformed", "false"]
+          #- values: ["--dataset_name", "Levine_13dim", "--transformed", "false"] # works
           # - values: ["--dataset_name", "Levine_13dim", "--transformed", "true"]
-          # - values: ["--dataset_name", "Levine_32dim", "--transformed", "false"]
+          # - values: ["--dataset_name", "Levine_32dim", "--transformed", "false"] # works
           # - values: ["--dataset_name", "Levine_32dim", "--transformed", "true"]
           # - values: ["--dataset_name", "Mossman_rare", "--transformed", "false"]
           # - values: ["--dataset_name", "Mossman_rare", "--transformed", "true"]
@@ -59,6 +59,7 @@ stages:
           # - values: ["--dataset_name", "Nilsson_rare", "--transformed", "true"]
           # - values: ["--dataset_name", "Samusik_01", "--transformed", "false"]
           # - values: ["--dataset_name", "Samusik_01", "--transformed", "true"]
+          - values: ["--dataset_name", "covid", "--transformed", "false"]
           # - values: ["--dataset_name", "", "--transformed", "false"] #Template
     outputs:
       - id: data.raw
@@ -71,8 +72,9 @@ stages:
         name: "Data preprocessing for CyTOF datasets"
         software_environment: "py"
         repository:
-          url: https://github.com/kaae-2/ob-pipeline-preprocessing
-          commit: 4036e89
+          url: https://github.com/helenewegener1/ob-pipeline-preprocessing
+          commit: ac61743
+
         parameters:
 
     inputs:
@@ -80,41 +82,46 @@ stages:
           - data.raw
           - data.labels
     outputs:
-      - id: data.matrix
-        path: "{input}/{stage}/{module}/{params}/{dataset}.matrix.gz"
-      - id: data.true_labels
-        path: "{input}/{stage}/{module}/{params}/{dataset}.true_labels.gz"
+      - id: test.data.matrix
+        path: "{input}/{stage}/{module}/{params}/{dataset}.test.matrix.gz"
+      - id: labels_test
+        path: "{input}/{stage}/{module}/{params}/{dataset}.test.labels.gz"
+      - id: train.data.matrix
+        path: "{input}/{stage}/{module}/{params}/{dataset}.train.matrix.gz"
+      - id: labels_train 
+        path: "{input}/{stage}/{module}/{params}/{dataset}.train.labels.gz"
 
   - id: analysis
     inputs:
       - entries:
-          - data.matrix
-          - data.true_labels
-
+          - test.data.matrix
+          - labels_test
+          - train.data.matrix
+          - labels_train
     modules:
 
       - id: dgcytof
         name: "DG-CyTOF"
         software_environment: py
         repository:
-          url: https://github.com/kaae-2/ob-pipeline-dgcytof
-          commit: d5d2e6f
+          url: https://github.com/helenewegener1/ob-pipeline-dgcytof
+          commit: f28d69b75e9b85f6138ca2646293d3ec10d5a9f9
         parameters: []
-
+      
       - id: cyanno
         name: "CyAnno annotator"
         software_environment: cyanno
         repository:
-          url: https://github.com/JavierHdCKU/ob-pipeline-cyanno
-          commit: d45303799244b31e99a9ef4d8b16bc8fbff8befa
+          url: https://github.com/helenewegener1/ob-pipeline-cyanno
+          commit: dc467999596c8a0f35250980cae76dc8c1f9807e
         parameters: []
-      
+ 
       - id: random
         name: "Random"
         software_environment: cran
         repository:
           url: https://github.com/helenewegener1/benchmark_random
-          commit: dcab3e73efc898cd026d37e0721db4a76b007d3c
+          commit: 91f0d016aaba6c7b146ed5e6d860e2c7939a59b3
         parameters: []
 
     outputs:
@@ -127,8 +134,8 @@ stages:
         name: "benchmark metrics for flow/cytof data"
         software_environment: "py"
         repository:
-          url: https://github.com/kaae-2/ob-pipeline-metrics
-          commit: cd90760
+          url: https://github.com/helenewegener1/ob-pipeline-metrics
+          commit: 219789546f816de227580142e90d6d7884992e90
         parameters:
           - values: ["--metric", "all"]
         #  - values: ["--metric", "accuracy"]
@@ -143,7 +150,7 @@ stages:
     inputs:
       - entries:
           - analysis.prediction
-          - data.true_labels
+          - labels_test
     outputs:
       - id: metrics.scores
         path: "{input}/{stage}/{module}/{params}/{dataset}.flow_metrics.json.gz"
