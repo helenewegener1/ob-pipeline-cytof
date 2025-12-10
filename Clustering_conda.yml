@@ -49,7 +49,7 @@ stages:
           url: https://github.com/kaae-2/ob-pipeline-data
           commit: 553727df18bacefb107fd9299136550a159ac1ce
         parameters:
-          # - values: ["--dataset_name", "Levine_13dim", "--transformed", "false"] # works
+          - values: ["--dataset_name", "Levine_13dim", "--transformed", "false"] # works
           # - values: ["--dataset_name", "Levine_13dim", "--transformed", "true"]
           # - values: ["--dataset_name", "Levine_32dim", "--transformed", "false"] # works
           # - values: ["--dataset_name", "Levine_32dim", "--transformed", "true"]
@@ -59,7 +59,7 @@ stages:
           # - values: ["--dataset_name", "Nilsson_rare", "--transformed", "true"]
           # - values: ["--dataset_name", "Samusik_01", "--transformed", "false"]
           # - values: ["--dataset_name", "Samusik_01", "--transformed", "true"]
-          - values: ["--dataset_name", "covid", "--transformed", "true"]
+          # - values: ["--dataset_name", "covid", "--transformed", "true"]
           # - values: ["--dataset_name", "", "--transformed", "false"] #Template
           # - values: ["--dataset_name", "FlowCAP_ND", "--transformed", "false"]
     outputs:
@@ -74,16 +74,16 @@ stages:
         software_environment: "py"
         repository:
           url: https://github.com/helenewegener1/ob-pipeline-preprocessing
-          commit: 9f5582ad1918c70c2ad8b7dab3368a16281afba0
+          commit: 3d18fffcb6c7d3780284de8bbfa9d1c456ee16cc
 
         parameters:
-          # - values: ["--raw_path", "https://raw.githubusercontent.com/kaae-2/ob-flow-datasets/main/data/FlowCAP_ND.fcs.gz"]
-          - values: ["--raw_path", "https://raw.githubusercontent.com/kaae-2/ob-flow-datasets/main/data/FlowCAP_WNV.fcs.gz"]
+          - values: ["--seed", 66]
+          # - values: ["--raw_path", "https://raw.githubusercontent.com/kaae-2/ob-flow-datasets/main/data/FlowCAP_WNV.fcs.gz"]
 
-    #inputs:
-      # - entries:
-          # - data.raw
-          # - data.labels
+    inputs:
+      - entries:
+          - data.raw
+          - data.labels
     outputs:
       - id: test.data.matrix
         path: "{input}/{stage}/{module}/{params}/{dataset}.test.matrix.gz"
