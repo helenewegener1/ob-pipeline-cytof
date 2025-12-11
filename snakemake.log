@@ -915,3 +915,844 @@ total                                                                           
 2025-12-10 08:39:19 [INFO] None
 2025-12-10 08:39:19 [INFO] Complete log(s): /home/helene/benchmarks/ob-pipeline-cytof/.snakemake/log/2025-12-10T083835.279584.snakemake.log
 2025-12-10 08:39:19 [INFO] Benchmark run has finished successfully.
+2025-12-10 08:46:20 [INFO] Assuming unrestricted shared filesystem usage.
+2025-12-10 08:46:20 [INFO] None
+2025-12-10 08:46:20 [INFO] host: ubuntu-32gb-nbg1-1
+2025-12-10 08:46:20 [INFO] Building DAG of jobs...
+2025-12-10 08:46:21 [WARNING] Your conda installation is not configured to use strict channel priorities. This is however important for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+2025-12-10 08:46:21 [INFO] Using shell: /usr/bin/bash
+2025-12-10 08:46:21 [INFO] Provided cores: 1 (use --cores to define parallelism)
+2025-12-10 08:46:21 [INFO] Rules claiming more threads will be scaled down.
+2025-12-10 08:46:21 [INFO] Job stats:
+job                                                                                       count
+--------------------------------------------------------------------------------------  -------
+all                                                                                           1
+analysis_random_default                                                                       1
+metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010        1
+total                                                                                         3
+
+2025-12-10 08:46:21 [INFO] Select jobs to execute...
+2025-12-10 08:46:21 [INFO] Execute 1 jobs...
+2025-12-10 08:46:21 [INFO]  Rule: analysis_random_default, Jobid: 7
+2025-12-10 08:46:21 [INFO] Shell command: None
+2025-12-10 08:46:21 [INFO] Activating conda environment: .snakemake/conda/0e199521e37e818cadfa5b4513af5b84_
+2025-12-10 08:46:22 [INFO] Activating conda environment: .snakemake/conda/0e199521e37e818cadfa5b4513af5b84_
+2025-12-10 08:46:25 [ERROR] RuleException:
+CalledProcessError in file "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/site-packages/omnibenchmark/workflow/snakemake/rules/rule_node.smk", line 186:
+Command 'source /home/helene/miniforge3/bin/activate '/home/helene/benchmarks/ob-pipeline-cytof/.snakemake/conda/0e199521e37e818cadfa5b4513af5b84_'; set -euo pipefail;  python /home/helene/benchmarks/ob-pipeline-cytof/.snakemake/scripts/tmptgt8casf.run_module.py' returned non-zero exit status 1.
+2025-12-10 08:46:25 [ERROR] Error in rule analysis_random_default, jobid: 7
+2025-12-10 08:46:25 [INFO] Removing output files of failed job analysis_random_default since they might be corrupted:
+out/data/data_import/.39e04c32bfe741dadaaa3fc7842586f32079c7042a399c9ffb6316987a4d6666/preprocessing/data_preprocessing/.50184eb3c724ea74f14d4fd608f7662215dc32ccb77793ae8b7a3f9454187ee6/analysis/random/default/data_import_predicted_labels.txt
+2025-12-10 08:46:25 [INFO] Shutting down, this might take some time.
+2025-12-10 08:46:25 [ERROR] Exiting because a job execution failed. Look below for error messages
+2025-12-10 08:46:25 [ERROR] Error in rule analysis_random_default, jobid: 7
+2025-12-10 08:46:25 [INFO] Complete log(s): /home/helene/benchmarks/ob-pipeline-cytof/.snakemake/log/2025-12-10T084620.571990.snakemake.log
+2025-12-10 08:46:25 [ERROR] WorkflowError:
+At least one job did not complete successfully.
+2025-12-10 08:46:25 [ERROR] Benchmark run has failed.
+2025-12-10 08:49:24 [INFO] Assuming unrestricted shared filesystem usage.
+2025-12-10 08:49:24 [INFO] None
+2025-12-10 08:49:24 [INFO] host: ubuntu-32gb-nbg1-1
+2025-12-10 08:49:24 [INFO] Building DAG of jobs...
+2025-12-10 08:49:25 [WARNING] Your conda installation is not configured to use strict channel priorities. This is however important for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+2025-12-10 08:49:25 [INFO] Using shell: /usr/bin/bash
+2025-12-10 08:49:25 [INFO] Provided cores: 1 (use --cores to define parallelism)
+2025-12-10 08:49:25 [INFO] Rules claiming more threads will be scaled down.
+2025-12-10 08:49:25 [INFO] Job stats:
+job                                                                                       count
+--------------------------------------------------------------------------------------  -------
+all                                                                                           1
+analysis_random_default                                                                       1
+metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010        1
+total                                                                                         3
+
+2025-12-10 08:49:25 [INFO] Select jobs to execute...
+2025-12-10 08:49:25 [INFO] Execute 1 jobs...
+2025-12-10 08:49:25 [INFO]  Rule: analysis_random_default, Jobid: 7
+2025-12-10 08:49:25 [INFO] Shell command: None
+2025-12-10 08:49:25 [INFO] Activating conda environment: .snakemake/conda/0e199521e37e818cadfa5b4513af5b84_
+2025-12-10 08:49:26 [INFO] Activating conda environment: .snakemake/conda/0e199521e37e818cadfa5b4513af5b84_
+2025-12-10 08:49:29 [ERROR] RuleException:
+CalledProcessError in file "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/site-packages/omnibenchmark/workflow/snakemake/rules/rule_node.smk", line 186:
+Command 'source /home/helene/miniforge3/bin/activate '/home/helene/benchmarks/ob-pipeline-cytof/.snakemake/conda/0e199521e37e818cadfa5b4513af5b84_'; set -euo pipefail;  python /home/helene/benchmarks/ob-pipeline-cytof/.snakemake/scripts/tmpxallla8_.run_module.py' returned non-zero exit status 1.
+2025-12-10 08:49:29 [ERROR] Error in rule analysis_random_default, jobid: 7
+2025-12-10 08:49:29 [INFO] Removing output files of failed job analysis_random_default since they might be corrupted:
+out/data/data_import/.39e04c32bfe741dadaaa3fc7842586f32079c7042a399c9ffb6316987a4d6666/preprocessing/data_preprocessing/.50184eb3c724ea74f14d4fd608f7662215dc32ccb77793ae8b7a3f9454187ee6/analysis/random/default/data_import_predicted_labels.txt
+2025-12-10 08:49:29 [INFO] Shutting down, this might take some time.
+2025-12-10 08:49:29 [ERROR] Exiting because a job execution failed. Look below for error messages
+2025-12-10 08:49:29 [ERROR] Error in rule analysis_random_default, jobid: 7
+2025-12-10 08:49:29 [INFO] Complete log(s): /home/helene/benchmarks/ob-pipeline-cytof/.snakemake/log/2025-12-10T084924.727598.snakemake.log
+2025-12-10 08:49:29 [ERROR] WorkflowError:
+At least one job did not complete successfully.
+2025-12-10 08:49:29 [ERROR] Benchmark run has failed.
+2025-12-10 08:52:15 [INFO] Assuming unrestricted shared filesystem usage.
+2025-12-10 08:52:15 [INFO] None
+2025-12-10 08:52:15 [INFO] host: ubuntu-32gb-nbg1-1
+2025-12-10 08:52:15 [INFO] Building DAG of jobs...
+2025-12-10 08:52:16 [WARNING] Your conda installation is not configured to use strict channel priorities. This is however important for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+2025-12-10 08:52:16 [INFO] Using shell: /usr/bin/bash
+2025-12-10 08:52:16 [INFO] Provided cores: 1 (use --cores to define parallelism)
+2025-12-10 08:52:16 [INFO] Rules claiming more threads will be scaled down.
+2025-12-10 08:52:16 [INFO] Job stats:
+job                                                                                       count
+--------------------------------------------------------------------------------------  -------
+all                                                                                           1
+analysis_random_default                                                                       1
+metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010        1
+total                                                                                         3
+
+2025-12-10 08:52:16 [INFO] Select jobs to execute...
+2025-12-10 08:52:16 [INFO] Execute 1 jobs...
+2025-12-10 08:52:16 [INFO]  Rule: analysis_random_default, Jobid: 7
+2025-12-10 08:52:16 [INFO] Shell command: None
+2025-12-10 08:52:16 [INFO] Activating conda environment: .snakemake/conda/0e199521e37e818cadfa5b4513af5b84_
+2025-12-10 08:52:16 [INFO] Activating conda environment: .snakemake/conda/0e199521e37e818cadfa5b4513af5b84_
+2025-12-10 08:52:19 [INFO] Finished jobid: 7 (Rule: analysis_random_default)
+2025-12-10 08:52:19 [INFO] None
+2025-12-10 08:52:19 [INFO] Select jobs to execute...
+2025-12-10 08:52:19 [INFO] Execute 1 jobs...
+2025-12-10 08:52:19 [INFO]  Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010, Jobid: 8
+2025-12-10 08:52:19 [INFO] Shell command: None
+2025-12-10 08:52:19 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 08:52:20 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 08:52:22 [INFO] Finished jobid: 8 (Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010)
+2025-12-10 08:52:22 [INFO] None
+2025-12-10 08:52:22 [INFO] Select jobs to execute...
+2025-12-10 08:52:22 [INFO] Execute 1 jobs...
+2025-12-10 08:52:22 [INFO]  Rule: all, Jobid: 0
+2025-12-10 08:52:22 [INFO] Shell command: None
+2025-12-10 08:52:24 [INFO] Finished jobid: 0 (Rule: all)
+2025-12-10 08:52:24 [INFO] None
+2025-12-10 08:52:24 [INFO] Complete log(s): /home/helene/benchmarks/ob-pipeline-cytof/.snakemake/log/2025-12-10T085215.225608.snakemake.log
+2025-12-10 08:52:24 [INFO] Benchmark run has finished successfully.
+2025-12-10 08:56:07 [INFO] Assuming unrestricted shared filesystem usage.
+2025-12-10 08:56:07 [INFO] None
+2025-12-10 08:56:07 [INFO] host: ubuntu-32gb-nbg1-1
+2025-12-10 08:56:07 [INFO] Building DAG of jobs...
+2025-12-10 08:56:08 [WARNING] Your conda installation is not configured to use strict channel priorities. This is however important for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+2025-12-10 08:56:08 [INFO] Using shell: /usr/bin/bash
+2025-12-10 08:56:08 [INFO] Provided cores: 1 (use --cores to define parallelism)
+2025-12-10 08:56:08 [INFO] Rules claiming more threads will be scaled down.
+2025-12-10 08:56:08 [INFO] Job stats:
+job                                                                                       count
+--------------------------------------------------------------------------------------  -------
+all                                                                                           1
+metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010        3
+total                                                                                         4
+
+2025-12-10 08:56:08 [INFO] Select jobs to execute...
+2025-12-10 08:56:08 [INFO] Execute 1 jobs...
+2025-12-10 08:56:08 [INFO]  Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010, Jobid: 4
+2025-12-10 08:56:08 [INFO] Shell command: None
+2025-12-10 08:56:08 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 08:56:08 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 08:56:09 [INFO] Select jobs to execute...
+2025-12-10 08:56:10 [INFO] Waiting at most 5 seconds for missing files:
+out/data/data_import/.39e04c32bfe741dadaaa3fc7842586f32079c7042a399c9ffb6316987a4d6666/preprocessing/data_preprocessing/.50184eb3c724ea74f14d4fd608f7662215dc32ccb77793ae8b7a3f9454187ee6/analysis/cyanno/default/metrics/flow_metrics/.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010/data_import.flow_metrics.json.gz (missing locally)
+2025-12-10 08:56:15 [ERROR] MissingOutputException in rule metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010 in file "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/site-packages/omnibenchmark/workflow/snakemake/rules/rule_node.smk", line 166:
+Job 4  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+out/data/data_import/.39e04c32bfe741dadaaa3fc7842586f32079c7042a399c9ffb6316987a4d6666/preprocessing/data_preprocessing/.50184eb3c724ea74f14d4fd608f7662215dc32ccb77793ae8b7a3f9454187ee6/analysis/cyanno/default/metrics/flow_metrics/.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010/data_import.flow_metrics.json.gz (missing locally, parent dir contents: data_import_performance.txt, parameters.json, stderr.log)
+2025-12-10 08:56:15 [INFO] Shutting down, this might take some time.
+2025-12-10 08:56:15 [ERROR] Exiting because a job execution failed. Look below for error messages
+2025-12-10 08:56:15 [ERROR] Error in rule metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010, jobid: 4
+2025-12-10 08:56:15 [INFO] Complete log(s): /home/helene/benchmarks/ob-pipeline-cytof/.snakemake/log/2025-12-10T085607.000281.snakemake.log
+2025-12-10 08:56:15 [ERROR] WorkflowError:
+At least one job did not complete successfully.
+2025-12-10 08:56:15 [ERROR] Benchmark run has failed.
+2025-12-10 08:58:14 [INFO] Assuming unrestricted shared filesystem usage.
+2025-12-10 08:58:14 [INFO] None
+2025-12-10 08:58:14 [INFO] host: ubuntu-32gb-nbg1-1
+2025-12-10 08:58:14 [INFO] Building DAG of jobs...
+2025-12-10 08:58:15 [WARNING] Your conda installation is not configured to use strict channel priorities. This is however important for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+2025-12-10 08:58:15 [INFO] Using shell: /usr/bin/bash
+2025-12-10 08:58:15 [INFO] Provided cores: 1 (use --cores to define parallelism)
+2025-12-10 08:58:15 [INFO] Rules claiming more threads will be scaled down.
+2025-12-10 08:58:15 [INFO] Job stats:
+job                                                                                       count
+--------------------------------------------------------------------------------------  -------
+all                                                                                           1
+metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010        1
+total                                                                                         2
+
+2025-12-10 08:58:15 [INFO] Select jobs to execute...
+2025-12-10 08:58:15 [INFO] Execute 1 jobs...
+2025-12-10 08:58:15 [INFO]  Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010, Jobid: 4
+2025-12-10 08:58:15 [INFO] Shell command: None
+2025-12-10 08:58:15 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 08:58:15 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 08:58:17 [INFO] Finished jobid: 4 (Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010)
+2025-12-10 08:58:17 [INFO] None
+2025-12-10 08:58:17 [INFO] Select jobs to execute...
+2025-12-10 08:58:17 [INFO] Execute 1 jobs...
+2025-12-10 08:58:17 [INFO]  Rule: all, Jobid: 0
+2025-12-10 08:58:17 [INFO] Shell command: None
+2025-12-10 08:58:19 [INFO] Finished jobid: 0 (Rule: all)
+2025-12-10 08:58:19 [INFO] None
+2025-12-10 08:58:19 [INFO] Complete log(s): /home/helene/benchmarks/ob-pipeline-cytof/.snakemake/log/2025-12-10T085814.196218.snakemake.log
+2025-12-10 08:58:19 [INFO] Benchmark run has finished successfully.
+2025-12-10 09:39:51 [INFO] Assuming unrestricted shared filesystem usage.
+2025-12-10 09:39:51 [INFO] None
+2025-12-10 09:39:51 [INFO] host: ubuntu-32gb-nbg1-1
+2025-12-10 09:39:51 [INFO] Building DAG of jobs...
+2025-12-10 09:39:52 [WARNING] Your conda installation is not configured to use strict channel priorities. This is however important for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+2025-12-10 09:39:52 [INFO] Using shell: /usr/bin/bash
+2025-12-10 09:39:52 [INFO] Provided cores: 1 (use --cores to define parallelism)
+2025-12-10 09:39:52 [INFO] Rules claiming more threads will be scaled down.
+2025-12-10 09:39:53 [INFO] Job stats:
+job                                                                                       count
+--------------------------------------------------------------------------------------  -------
+all                                                                                           1
+metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010        3
+total                                                                                         4
+
+2025-12-10 09:39:53 [INFO] Select jobs to execute...
+2025-12-10 09:39:53 [INFO] Execute 1 jobs...
+2025-12-10 09:39:53 [INFO]  Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010, Jobid: 4
+2025-12-10 09:39:53 [INFO] Shell command: None
+2025-12-10 09:39:53 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 09:39:53 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 09:39:54 [INFO] Select jobs to execute...
+2025-12-10 09:39:55 [INFO] Finished jobid: 4 (Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010)
+2025-12-10 09:39:55 [INFO] None
+2025-12-10 09:39:55 [INFO] Execute 1 jobs...
+2025-12-10 09:39:55 [INFO]  Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010, Jobid: 8
+2025-12-10 09:39:55 [INFO] Shell command: None
+2025-12-10 09:39:55 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 09:39:56 [INFO] Select jobs to execute...
+2025-12-10 09:39:56 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 09:39:58 [INFO] Finished jobid: 8 (Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010)
+2025-12-10 09:39:58 [INFO] None
+2025-12-10 09:39:58 [INFO] Execute 1 jobs...
+2025-12-10 09:39:58 [INFO]  Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010, Jobid: 6
+2025-12-10 09:39:58 [INFO] Shell command: None
+2025-12-10 09:39:58 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 09:39:58 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 09:40:00 [INFO] Finished jobid: 6 (Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010)
+2025-12-10 09:40:00 [INFO] None
+2025-12-10 09:40:00 [INFO] Select jobs to execute...
+2025-12-10 09:40:00 [INFO] Execute 1 jobs...
+2025-12-10 09:40:00 [INFO]  Rule: all, Jobid: 0
+2025-12-10 09:40:00 [INFO] Shell command: None
+2025-12-10 09:40:02 [INFO] Finished jobid: 0 (Rule: all)
+2025-12-10 09:40:02 [INFO] None
+2025-12-10 09:40:02 [INFO] Complete log(s): /home/helene/benchmarks/ob-pipeline-cytof/.snakemake/log/2025-12-10T093951.941888.snakemake.log
+2025-12-10 09:40:02 [INFO] Benchmark run has finished successfully.
+2025-12-10 09:53:24 [INFO] Assuming unrestricted shared filesystem usage.
+2025-12-10 09:53:24 [INFO] None
+2025-12-10 09:53:24 [INFO] host: ubuntu-32gb-nbg1-1
+2025-12-10 09:53:24 [INFO] Building DAG of jobs...
+2025-12-10 09:53:25 [WARNING] Your conda installation is not configured to use strict channel priorities. This is however important for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+2025-12-10 09:53:25 [INFO] Creating conda environment envs/cran.yml...
+2025-12-10 09:53:25 [INFO] Downloading and installing remote packages.
+2025-12-10 09:55:21 [INFO] Assuming unrestricted shared filesystem usage.
+2025-12-10 09:55:21 [INFO] None
+2025-12-10 09:55:21 [INFO] host: ubuntu-32gb-nbg1-1
+2025-12-10 09:55:21 [INFO] Building DAG of jobs...
+2025-12-10 09:55:22 [ERROR] Traceback (most recent call last):
+
+  File "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/site-packages/snakemake/deployment/conda.py", line 784, in _check
+    self._check_version()
+
+  File "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/site-packages/snakemake/deployment/conda.py", line 795, in _check_version
+    version = shell.check_output(
+              ^^^^^^^^^^^^^^^^^^^
+
+  File "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/site-packages/snakemake/shell.py", line 65, in check_output
+    return sp.check_output(cmd, shell=True, executable=executable, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+
+subprocess.CalledProcessError: Command 'conda --version' died with <Signals.SIGINT: 2>.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/site-packages/snakemake/cli.py", line 2193, in args_to_api
+    dag_api.execute_workflow(
+
+  File "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/site-packages/snakemake/api.py", line 634, in execute_workflow
+    workflow.execute(
+
+  File "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/site-packages/snakemake/workflow.py", line 1277, in execute
+    self._build_dag()
+
+  File "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/site-packages/snakemake/workflow.py", line 1220, in _build_dag
+    async_run(self.dag.init())
+
+  File "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/site-packages/snakemake/common/__init__.py", line 100, in async_run
+    return asyncio.run(coroutine)
+           ^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+
+  File "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/asyncio/base_events.py", line 664, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+
+  File "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/site-packages/snakemake/dag.py", line 273, in init
+    await self.update_needrun(create_inventory=True)
+
+  File "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/site-packages/snakemake/dag.py", line 1582, in update_needrun
+    if await update_needrun(job):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/site-packages/snakemake/dag.py", line 1519, in update_needrun
+    reason.software_stack_changed = any(
+                                    ^^^^
+
+  File "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/site-packages/snakemake/persistence.py", line 835, in <genexpr>
+    return (f for f in job.output if func(job, file=f))
+                                     ^^^^^^^^^^^^^^^^^
+
+  File "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/site-packages/snakemake/persistence.py", line 570, in _software_stack_changed
+    return recorded is not None and recorded != self._software_stack_hash(job)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/site-packages/snakemake/persistence.py", line 584, in _software_stack_hash
+    md5hash.update(job.conda_env.hash.encode())
+                   ^^^^^^^^^^^^^^^^^^
+
+  File "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/site-packages/snakemake/deployment/conda.py", line 224, in hash
+    self._hash = self._get_hash(
+                 ^^^^^^^^^^^^^^^
+
+  File "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/site-packages/snakemake/deployment/conda.py", line 256, in _get_hash
+    content_pin = self.content_pin
+                  ^^^^^^^^^^^^^^^^
+
+  File "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/site-packages/snakemake/deployment/conda.py", line 215, in content_pin
+    self._content_pin = self._get_content_pin()
+                        ^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/site-packages/snakemake/deployment/conda.py", line 188, in _get_content_pin
+    if self.pin_file:
+       ^^^^^^^^^^^^^
+
+  File "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/site-packages/snakemake_interface_common/utils.py", line 34, in __get__
+    value = self.method(instance)
+            ^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/site-packages/snakemake/deployment/conda.py", line 128, in pin_file
+    f".{self.conda.platform}.pin.txt",
+        ^^^^^^^^^^
+
+  File "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/site-packages/snakemake_interface_common/utils.py", line 34, in __get__
+    value = self.method(instance)
+            ^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/site-packages/snakemake/deployment/conda.py", line 115, in conda
+    return Conda(container_img=self._container_img, check=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/site-packages/snakemake/deployment/conda.py", line 728, in __init__
+    self._check()
+
+  File "/home/helene/miniforge3/envs/omnibenchmark/lib/python3.12/site-packages/snakemake/deployment/conda.py", line 788, in _check
+    "Unable to check conda installation:\n" + e.stderr.decode()
+                                              ^^^^^^^^^^^^^^^
+
+AttributeError: 'str' object has no attribute 'decode'. Did you mean: 'encode'?
+
+2025-12-10 09:55:22 [ERROR] Benchmark run has failed.
+2025-12-10 09:55:27 [INFO] Assuming unrestricted shared filesystem usage.
+2025-12-10 09:55:27 [INFO] None
+2025-12-10 09:55:27 [INFO] host: ubuntu-32gb-nbg1-1
+2025-12-10 09:55:27 [INFO] Building DAG of jobs...
+2025-12-10 09:55:29 [WARNING] Your conda installation is not configured to use strict channel priorities. This is however important for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+2025-12-10 09:55:29 [INFO] Creating conda environment envs/cran.yml...
+2025-12-10 09:55:29 [INFO] Downloading and installing remote packages.
+2025-12-10 09:55:41 [ERROR] CreateCondaEnvironmentException:
+Could not create conda environment from /home/helene/benchmarks/ob-pipeline-cytof/envs/cran.yml:
+Command:
+conda env create --quiet --no-default-packages --file "/home/helene/benchmarks/ob-pipeline-cytof/.snakemake/conda/a717a8286b7f8709c4d6b71a669f2d8d_.yaml" --prefix "/home/helene/benchmarks/ob-pipeline-cytof/.snakemake/conda/a717a8286b7f8709c4d6b71a669f2d8d_"
+Output:
+Channels:
+ - conda-forge
+ - bioconda
+ - r
+Platform: linux-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+Preparing transaction: ...working... done
+Verifying transaction: ...working... failed
+
+CondaVerificationError: The package for bioconductor-data-packages located at /home/helene/miniforge3/pkgs/bioconductor-data-packages-20250625-hdfd78af_0
+appears to be corrupted. The path 'bin/installBiocDataPackage.sh'
+specified in the package manifest cannot be found.
+
+SafetyError: The package for bioconductor-data-packages located at /home/helene/miniforge3/pkgs/bioconductor-data-packages-20250625-hdfd78af_0
+appears to be corrupted. The path 'share/bioconductor-data-packages/dataURLs.json'
+has an incorrect size.
+  reported size: 1353248 bytes
+  actual size: 311296 bytes
+
+CondaVerificationError: The package for r-sessioninfo located at /home/helene/miniforge3/pkgs/r-sessioninfo-1.2.3-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/sessioninfo/DESCRIPTION'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-sessioninfo located at /home/helene/miniforge3/pkgs/r-sessioninfo-1.2.3-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/sessioninfo/INDEX'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-sessioninfo located at /home/helene/miniforge3/pkgs/r-sessioninfo-1.2.3-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/sessioninfo/Meta/links.rds'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-sessioninfo located at /home/helene/miniforge3/pkgs/r-sessioninfo-1.2.3-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/sessioninfo/Meta/package.rds'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-sessioninfo located at /home/helene/miniforge3/pkgs/r-sessioninfo-1.2.3-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/sessioninfo/NAMESPACE'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-sessioninfo located at /home/helene/miniforge3/pkgs/r-sessioninfo-1.2.3-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/sessioninfo/NEWS.md'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-sessioninfo located at /home/helene/miniforge3/pkgs/r-sessioninfo-1.2.3-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/sessioninfo/R/sessioninfo.rdx'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-sessioninfo located at /home/helene/miniforge3/pkgs/r-sessioninfo-1.2.3-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/sessioninfo/help/figures/session-info2.svg'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-sessioninfo located at /home/helene/miniforge3/pkgs/r-sessioninfo-1.2.3-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/sessioninfo/html/R.css'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-pkgbuild located at /home/helene/miniforge3/pkgs/r-pkgbuild-1.4.8-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/pkgbuild/INDEX'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-pkgbuild located at /home/helene/miniforge3/pkgs/r-pkgbuild-1.4.8-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/pkgbuild/LICENSE'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-pkgbuild located at /home/helene/miniforge3/pkgs/r-pkgbuild-1.4.8-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/pkgbuild/Meta/features.rds'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-pkgbuild located at /home/helene/miniforge3/pkgs/r-pkgbuild-1.4.8-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/pkgbuild/Meta/package.rds'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-pkgbuild located at /home/helene/miniforge3/pkgs/r-pkgbuild-1.4.8-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/pkgbuild/NAMESPACE'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-pkgbuild located at /home/helene/miniforge3/pkgs/r-pkgbuild-1.4.8-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/pkgbuild/help/aliases.rds'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-pkgbuild located at /home/helene/miniforge3/pkgs/r-pkgbuild-1.4.8-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/pkgbuild/help/pkgbuild.rdx'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-pkgbuild located at /home/helene/miniforge3/pkgs/r-pkgbuild-1.4.8-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/pkgbuild/html/R.css'
+specified in the package manifest cannot be found.
+
+
+
+2025-12-10 09:55:41 [ERROR] Benchmark run has failed.
+2025-12-10 09:56:23 [INFO] Assuming unrestricted shared filesystem usage.
+2025-12-10 09:56:23 [INFO] None
+2025-12-10 09:56:23 [INFO] host: ubuntu-32gb-nbg1-1
+2025-12-10 09:56:23 [INFO] Building DAG of jobs...
+2025-12-10 09:56:24 [WARNING] Your conda installation is not configured to use strict channel priorities. This is however important for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+2025-12-10 09:56:24 [INFO] Nothing to be done (all requested files are present and up to date).
+2025-12-10 09:56:24 [INFO] Benchmark run has finished successfully.
+2025-12-10 09:58:38 [INFO] Assuming unrestricted shared filesystem usage.
+2025-12-10 09:58:38 [INFO] None
+2025-12-10 09:58:38 [INFO] host: ubuntu-32gb-nbg1-1
+2025-12-10 09:58:38 [INFO] Building DAG of jobs...
+2025-12-10 09:58:39 [WARNING] Your conda installation is not configured to use strict channel priorities. This is however important for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+2025-12-10 09:58:39 [INFO] Creating conda environment envs/cran.yml...
+2025-12-10 09:58:39 [INFO] Downloading and installing remote packages.
+2025-12-10 09:58:50 [ERROR] CreateCondaEnvironmentException:
+Could not create conda environment from /home/helene/benchmarks/ob-pipeline-cytof/envs/cran.yml:
+Command:
+conda env create --quiet --no-default-packages --file "/home/helene/benchmarks/ob-pipeline-cytof/.snakemake/conda/216fe975dd3eec1ed4677725964472b5_.yaml" --prefix "/home/helene/benchmarks/ob-pipeline-cytof/.snakemake/conda/216fe975dd3eec1ed4677725964472b5_"
+Output:
+Channels:
+ - conda-forge
+ - r
+ - bioconda
+Platform: linux-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+Preparing transaction: ...working... done
+Verifying transaction: ...working... failed
+
+CondaVerificationError: The package for bioconductor-data-packages located at /home/helene/miniforge3/pkgs/bioconductor-data-packages-20250625-hdfd78af_0
+appears to be corrupted. The path 'bin/installBiocDataPackage.sh'
+specified in the package manifest cannot be found.
+
+SafetyError: The package for bioconductor-data-packages located at /home/helene/miniforge3/pkgs/bioconductor-data-packages-20250625-hdfd78af_0
+appears to be corrupted. The path 'share/bioconductor-data-packages/dataURLs.json'
+has an incorrect size.
+  reported size: 1353248 bytes
+  actual size: 311296 bytes
+
+CondaVerificationError: The package for r-sessioninfo located at /home/helene/miniforge3/pkgs/r-sessioninfo-1.2.3-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/sessioninfo/DESCRIPTION'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-sessioninfo located at /home/helene/miniforge3/pkgs/r-sessioninfo-1.2.3-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/sessioninfo/INDEX'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-sessioninfo located at /home/helene/miniforge3/pkgs/r-sessioninfo-1.2.3-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/sessioninfo/Meta/links.rds'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-sessioninfo located at /home/helene/miniforge3/pkgs/r-sessioninfo-1.2.3-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/sessioninfo/Meta/package.rds'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-sessioninfo located at /home/helene/miniforge3/pkgs/r-sessioninfo-1.2.3-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/sessioninfo/NAMESPACE'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-sessioninfo located at /home/helene/miniforge3/pkgs/r-sessioninfo-1.2.3-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/sessioninfo/NEWS.md'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-sessioninfo located at /home/helene/miniforge3/pkgs/r-sessioninfo-1.2.3-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/sessioninfo/R/sessioninfo.rdx'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-sessioninfo located at /home/helene/miniforge3/pkgs/r-sessioninfo-1.2.3-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/sessioninfo/help/figures/session-info2.svg'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-sessioninfo located at /home/helene/miniforge3/pkgs/r-sessioninfo-1.2.3-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/sessioninfo/html/R.css'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-pkgbuild located at /home/helene/miniforge3/pkgs/r-pkgbuild-1.4.8-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/pkgbuild/INDEX'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-pkgbuild located at /home/helene/miniforge3/pkgs/r-pkgbuild-1.4.8-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/pkgbuild/LICENSE'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-pkgbuild located at /home/helene/miniforge3/pkgs/r-pkgbuild-1.4.8-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/pkgbuild/Meta/features.rds'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-pkgbuild located at /home/helene/miniforge3/pkgs/r-pkgbuild-1.4.8-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/pkgbuild/Meta/package.rds'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-pkgbuild located at /home/helene/miniforge3/pkgs/r-pkgbuild-1.4.8-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/pkgbuild/NAMESPACE'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-pkgbuild located at /home/helene/miniforge3/pkgs/r-pkgbuild-1.4.8-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/pkgbuild/help/aliases.rds'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-pkgbuild located at /home/helene/miniforge3/pkgs/r-pkgbuild-1.4.8-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/pkgbuild/help/pkgbuild.rdx'
+specified in the package manifest cannot be found.
+
+CondaVerificationError: The package for r-pkgbuild located at /home/helene/miniforge3/pkgs/r-pkgbuild-1.4.8-r43hc72bb7e_0
+appears to be corrupted. The path 'lib/R/library/pkgbuild/html/R.css'
+specified in the package manifest cannot be found.
+
+
+
+2025-12-10 09:58:50 [ERROR] Benchmark run has failed.
+2025-12-10 09:59:30 [INFO] Assuming unrestricted shared filesystem usage.
+2025-12-10 09:59:30 [INFO] None
+2025-12-10 09:59:30 [INFO] host: ubuntu-32gb-nbg1-1
+2025-12-10 09:59:30 [INFO] Building DAG of jobs...
+2025-12-10 09:59:31 [WARNING] Your conda installation is not configured to use strict channel priorities. This is however important for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+2025-12-10 09:59:31 [INFO] Nothing to be done (all requested files are present and up to date).
+2025-12-10 09:59:31 [INFO] Benchmark run has finished successfully.
+2025-12-10 10:35:48 [INFO] Assuming unrestricted shared filesystem usage.
+2025-12-10 10:35:48 [INFO] None
+2025-12-10 10:35:48 [INFO] host: ubuntu-32gb-nbg1-1
+2025-12-10 10:35:48 [INFO] Building DAG of jobs...
+2025-12-10 10:35:49 [WARNING] Your conda installation is not configured to use strict channel priorities. This is however important for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+2025-12-10 10:35:49 [INFO] Using shell: /usr/bin/bash
+2025-12-10 10:35:49 [INFO] Provided cores: 1 (use --cores to define parallelism)
+2025-12-10 10:35:49 [INFO] Rules claiming more threads will be scaled down.
+2025-12-10 10:35:49 [INFO] Job stats:
+job                                                                                       count
+--------------------------------------------------------------------------------------  -------
+all                                                                                           1
+metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010        3
+total                                                                                         4
+
+2025-12-10 10:35:49 [INFO] Select jobs to execute...
+2025-12-10 10:35:49 [INFO] Execute 1 jobs...
+2025-12-10 10:35:49 [INFO]  Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010, Jobid: 4
+2025-12-10 10:35:49 [INFO] Shell command: None
+2025-12-10 10:35:49 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 10:35:50 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 10:35:50 [INFO] Select jobs to execute...
+2025-12-10 10:35:52 [INFO] Finished jobid: 4 (Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010)
+2025-12-10 10:35:52 [INFO] None
+2025-12-10 10:35:52 [INFO] Execute 1 jobs...
+2025-12-10 10:35:52 [INFO]  Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010, Jobid: 8
+2025-12-10 10:35:52 [INFO] Shell command: None
+2025-12-10 10:35:52 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 10:35:52 [INFO] Select jobs to execute...
+2025-12-10 10:35:52 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 10:35:54 [INFO] Finished jobid: 8 (Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010)
+2025-12-10 10:35:54 [INFO] None
+2025-12-10 10:35:54 [INFO] Execute 1 jobs...
+2025-12-10 10:35:54 [INFO]  Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010, Jobid: 6
+2025-12-10 10:35:54 [INFO] Shell command: None
+2025-12-10 10:35:54 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 10:35:54 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 10:35:56 [INFO] Finished jobid: 6 (Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010)
+2025-12-10 10:35:56 [INFO] None
+2025-12-10 10:35:56 [INFO] Select jobs to execute...
+2025-12-10 10:35:56 [INFO] Execute 1 jobs...
+2025-12-10 10:35:56 [INFO]  Rule: all, Jobid: 0
+2025-12-10 10:35:56 [INFO] Shell command: None
+2025-12-10 10:35:58 [INFO] Finished jobid: 0 (Rule: all)
+2025-12-10 10:35:58 [INFO] None
+2025-12-10 10:35:58 [INFO] Complete log(s): /home/helene/benchmarks/ob-pipeline-cytof/.snakemake/log/2025-12-10T103548.641289.snakemake.log
+2025-12-10 10:35:58 [INFO] Benchmark run has finished successfully.
+2025-12-10 14:35:09 [INFO] Assuming unrestricted shared filesystem usage.
+2025-12-10 14:35:09 [INFO] None
+2025-12-10 14:35:09 [INFO] host: ubuntu-32gb-nbg1-1
+2025-12-10 14:35:09 [INFO] Building DAG of jobs...
+2025-12-10 14:35:10 [WARNING] Your conda installation is not configured to use strict channel priorities. This is however important for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+2025-12-10 14:35:10 [INFO] Using shell: /usr/bin/bash
+2025-12-10 14:35:10 [INFO] Provided cores: 1 (use --cores to define parallelism)
+2025-12-10 14:35:10 [INFO] Rules claiming more threads will be scaled down.
+2025-12-10 14:35:10 [INFO] Job stats:
+job                                                                                                   count
+--------------------------------------------------------------------------------------------------  -------
+all                                                                                                       1
+analysis_cyanno_default                                                                                   1
+analysis_dgcytof_default                                                                                  1
+analysis_random_default                                                                                   1
+data_data_import_.eed302384b0b16d2cf724b3ffe79094242777a039a9427cb37d14c1470d2081c                        1
+metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010                    3
+preprocessing_data_preprocessing_.50184eb3c724ea74f14d4fd608f7662215dc32ccb77793ae8b7a3f9454187ee6        1
+total                                                                                                     9
+
+2025-12-10 14:35:10 [INFO] Select jobs to execute...
+2025-12-10 14:35:10 [INFO] Execute 1 jobs...
+2025-12-10 14:35:10 [INFO]  Rule: data_data_import_.eed302384b0b16d2cf724b3ffe79094242777a039a9427cb37d14c1470d2081c, Jobid: 1
+2025-12-10 14:35:10 [INFO] Shell command: None
+2025-12-10 14:35:10 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 14:35:11 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 14:35:13 [INFO] Finished jobid: 1 (Rule: data_data_import_.eed302384b0b16d2cf724b3ffe79094242777a039a9427cb37d14c1470d2081c)
+2025-12-10 14:35:13 [INFO] None
+2025-12-10 14:35:13 [INFO] Select jobs to execute...
+2025-12-10 14:35:13 [INFO] Execute 1 jobs...
+2025-12-10 14:35:13 [INFO]  Rule: preprocessing_data_preprocessing_.50184eb3c724ea74f14d4fd608f7662215dc32ccb77793ae8b7a3f9454187ee6, Jobid: 3
+2025-12-10 14:35:13 [INFO] Shell command: None
+2025-12-10 14:35:13 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 14:35:13 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 14:35:39 [INFO] Finished jobid: 3 (Rule: preprocessing_data_preprocessing_.50184eb3c724ea74f14d4fd608f7662215dc32ccb77793ae8b7a3f9454187ee6)
+2025-12-10 14:35:39 [INFO] None
+2025-12-10 14:35:39 [INFO] Select jobs to execute...
+2025-12-10 14:35:39 [INFO] Execute 3 jobs...
+2025-12-10 14:35:39 [INFO]  Rule: analysis_cyanno_default, Jobid: 2
+2025-12-10 14:35:39 [INFO] Shell command: None
+2025-12-10 14:35:39 [INFO]  Rule: analysis_random_default, Jobid: 7
+2025-12-10 14:35:39 [INFO] Shell command: None
+2025-12-10 14:35:39 [INFO]  Rule: analysis_dgcytof_default, Jobid: 5
+2025-12-10 14:35:39 [INFO] Shell command: None
+2025-12-10 14:35:39 [INFO] Activating conda environment: .snakemake/conda/92822264f40461346830db80ddb755db_
+2025-12-10 14:35:39 [INFO] Activating conda environment: .snakemake/conda/0e199521e37e818cadfa5b4513af5b84_
+2025-12-10 14:35:39 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 14:35:39 [INFO] Activating conda environment: .snakemake/conda/92822264f40461346830db80ddb755db_
+2025-12-10 14:35:39 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 14:35:39 [INFO] Activating conda environment: .snakemake/conda/0e199521e37e818cadfa5b4513af5b84_
+2025-12-10 14:35:47 [INFO] Finished jobid: 7 (Rule: analysis_random_default)
+2025-12-10 14:35:47 [INFO] None
+2025-12-10 14:35:47 [INFO] Select jobs to execute...
+2025-12-10 14:35:47 [INFO] Execute 1 jobs...
+2025-12-10 14:35:47 [INFO]  Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010, Jobid: 8
+2025-12-10 14:35:47 [INFO] Shell command: None
+2025-12-10 14:35:47 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 14:35:47 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 14:35:49 [INFO] Finished jobid: 8 (Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010)
+2025-12-10 14:35:49 [INFO] None
+2025-12-10 14:35:51 [INFO] Finished jobid: 2 (Rule: analysis_cyanno_default)
+2025-12-10 14:35:51 [INFO] None
+2025-12-10 14:35:51 [INFO] Select jobs to execute...
+2025-12-10 14:35:51 [INFO] Execute 1 jobs...
+2025-12-10 14:35:51 [INFO]  Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010, Jobid: 4
+2025-12-10 14:35:51 [INFO] Shell command: None
+2025-12-10 14:35:51 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 14:35:51 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 14:35:53 [INFO] Finished jobid: 4 (Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010)
+2025-12-10 14:35:53 [INFO] None
+2025-12-10 14:36:24 [INFO] Finished jobid: 5 (Rule: analysis_dgcytof_default)
+2025-12-10 14:36:24 [INFO] None
+2025-12-10 14:36:24 [INFO] Select jobs to execute...
+2025-12-10 14:36:24 [INFO] Execute 1 jobs...
+2025-12-10 14:36:24 [INFO]  Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010, Jobid: 6
+2025-12-10 14:36:24 [INFO] Shell command: None
+2025-12-10 14:36:24 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 14:36:25 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 14:36:27 [INFO] Finished jobid: 6 (Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010)
+2025-12-10 14:36:27 [INFO] None
+2025-12-10 14:36:27 [INFO] Select jobs to execute...
+2025-12-10 14:36:27 [INFO] Execute 1 jobs...
+2025-12-10 14:36:27 [INFO]  Rule: all, Jobid: 0
+2025-12-10 14:36:27 [INFO] Shell command: None
+2025-12-10 14:36:29 [INFO] Finished jobid: 0 (Rule: all)
+2025-12-10 14:36:29 [INFO] None
+2025-12-10 14:36:29 [INFO] Complete log(s): /home/helene/benchmarks/ob-pipeline-cytof/.snakemake/log/2025-12-10T143509.632955.snakemake.log
+2025-12-10 14:36:29 [INFO] Benchmark run has finished successfully.
+2025-12-10 14:39:16 [INFO] Assuming unrestricted shared filesystem usage.
+2025-12-10 14:39:16 [INFO] None
+2025-12-10 14:39:16 [INFO] host: ubuntu-32gb-nbg1-1
+2025-12-10 14:39:16 [INFO] Building DAG of jobs...
+2025-12-10 14:39:17 [WARNING] Your conda installation is not configured to use strict channel priorities. This is however important for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+2025-12-10 14:39:17 [INFO] Using shell: /usr/bin/bash
+2025-12-10 14:39:17 [INFO] Provided cores: 1 (use --cores to define parallelism)
+2025-12-10 14:39:17 [INFO] Rules claiming more threads will be scaled down.
+2025-12-10 14:39:17 [INFO] Job stats:
+job                                                                                                   count
+--------------------------------------------------------------------------------------------------  -------
+all                                                                                                       1
+analysis_cyanno_default                                                                                   1
+analysis_dgcytof_default                                                                                  1
+analysis_random_default                                                                                   1
+data_data_import_.6f8a594d219df6ca56132cb00f3375afad17ebe5bb6341faab785bd7ac0183f9                        1
+metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010                    3
+preprocessing_data_preprocessing_.50184eb3c724ea74f14d4fd608f7662215dc32ccb77793ae8b7a3f9454187ee6        1
+total                                                                                                     9
+
+2025-12-10 14:39:17 [INFO] Select jobs to execute...
+2025-12-10 14:39:17 [INFO] Execute 1 jobs...
+2025-12-10 14:39:17 [INFO]  Rule: data_data_import_.6f8a594d219df6ca56132cb00f3375afad17ebe5bb6341faab785bd7ac0183f9, Jobid: 1
+2025-12-10 14:39:17 [INFO] Shell command: None
+2025-12-10 14:39:17 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 14:39:18 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 14:39:21 [INFO] Finished jobid: 1 (Rule: data_data_import_.6f8a594d219df6ca56132cb00f3375afad17ebe5bb6341faab785bd7ac0183f9)
+2025-12-10 14:39:21 [INFO] None
+2025-12-10 14:39:21 [INFO] Select jobs to execute...
+2025-12-10 14:39:21 [INFO] Execute 1 jobs...
+2025-12-10 14:39:21 [INFO]  Rule: preprocessing_data_preprocessing_.50184eb3c724ea74f14d4fd608f7662215dc32ccb77793ae8b7a3f9454187ee6, Jobid: 3
+2025-12-10 14:39:21 [INFO] Shell command: None
+2025-12-10 14:39:21 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 14:39:21 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 14:39:42 [INFO] Finished jobid: 3 (Rule: preprocessing_data_preprocessing_.50184eb3c724ea74f14d4fd608f7662215dc32ccb77793ae8b7a3f9454187ee6)
+2025-12-10 14:39:42 [INFO] None
+2025-12-10 14:39:42 [INFO] Select jobs to execute...
+2025-12-10 14:39:42 [INFO] Execute 3 jobs...
+2025-12-10 14:39:42 [INFO]  Rule: analysis_cyanno_default, Jobid: 2
+2025-12-10 14:39:42 [INFO] Shell command: None
+2025-12-10 14:39:42 [INFO]  Rule: analysis_random_default, Jobid: 7
+2025-12-10 14:39:42 [INFO] Shell command: None
+2025-12-10 14:39:42 [INFO] Activating conda environment: .snakemake/conda/92822264f40461346830db80ddb755db_
+2025-12-10 14:39:42 [INFO]  Rule: analysis_dgcytof_default, Jobid: 5
+2025-12-10 14:39:42 [INFO] Shell command: None
+2025-12-10 14:39:42 [INFO] Activating conda environment: .snakemake/conda/0e199521e37e818cadfa5b4513af5b84_
+2025-12-10 14:39:42 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 14:39:42 [INFO] Activating conda environment: .snakemake/conda/92822264f40461346830db80ddb755db_
+2025-12-10 14:39:42 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 14:39:42 [INFO] Activating conda environment: .snakemake/conda/0e199521e37e818cadfa5b4513af5b84_
+2025-12-10 14:39:48 [INFO] Finished jobid: 7 (Rule: analysis_random_default)
+2025-12-10 14:39:48 [INFO] None
+2025-12-10 14:39:48 [INFO] Select jobs to execute...
+2025-12-10 14:39:48 [INFO] Execute 1 jobs...
+2025-12-10 14:39:48 [INFO]  Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010, Jobid: 8
+2025-12-10 14:39:48 [INFO] Shell command: None
+2025-12-10 14:39:48 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 14:39:49 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 14:39:52 [INFO] Finished jobid: 8 (Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010)
+2025-12-10 14:39:52 [INFO] None
+2025-12-10 14:39:54 [INFO] Finished jobid: 2 (Rule: analysis_cyanno_default)
+2025-12-10 14:39:54 [INFO] None
+2025-12-10 14:39:54 [INFO] Select jobs to execute...
+2025-12-10 14:39:54 [INFO] Execute 1 jobs...
+2025-12-10 14:39:54 [INFO]  Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010, Jobid: 4
+2025-12-10 14:39:54 [INFO] Shell command: None
+2025-12-10 14:39:54 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 14:39:54 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 14:39:56 [INFO] Finished jobid: 4 (Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010)
+2025-12-10 14:39:56 [INFO] None
+2025-12-10 14:40:27 [INFO] Finished jobid: 5 (Rule: analysis_dgcytof_default)
+2025-12-10 14:40:27 [INFO] None
+2025-12-10 14:40:27 [INFO] Select jobs to execute...
+2025-12-10 14:40:27 [INFO] Execute 1 jobs...
+2025-12-10 14:40:27 [INFO]  Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010, Jobid: 6
+2025-12-10 14:40:27 [INFO] Shell command: None
+2025-12-10 14:40:27 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 14:40:28 [INFO] Activating conda environment: .snakemake/conda/a1a7b31717ce9697b8a39ae034666af4_
+2025-12-10 14:40:30 [INFO] Finished jobid: 6 (Rule: metrics_flow_metrics_.dadab5202a25740a12202dc2663099e332909148727a8fb21454afc6cbec3010)
+2025-12-10 14:40:30 [INFO] None
+2025-12-10 14:40:30 [INFO] Select jobs to execute...
+2025-12-10 14:40:30 [INFO] Execute 1 jobs...
+2025-12-10 14:40:30 [INFO]  Rule: all, Jobid: 0
+2025-12-10 14:40:30 [INFO] Shell command: None
+2025-12-10 14:40:32 [INFO] Finished jobid: 0 (Rule: all)
+2025-12-10 14:40:32 [INFO] None
+2025-12-10 14:40:32 [INFO] Complete log(s): /home/helene/benchmarks/ob-pipeline-cytof/.snakemake/log/2025-12-10T143916.621016.snakemake.log
+2025-12-10 14:40:32 [INFO] Benchmark run has finished successfully.
+2025-12-10 14:42:16 [INFO] Assuming unrestricted shared filesystem usage.
+2025-12-10 14:42:16 [INFO] None
+2025-12-10 14:42:16 [INFO] host: ubuntu-32gb-nbg1-1
+2025-12-10 14:42:16 [INFO] Building DAG of jobs...
+2025-12-10 14:42:17 [WARNING] Your conda installation is not configured to use strict channel priorities. This is however important for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+2025-12-10 14:42:17 [INFO] Using shell: /usr/bin/bash
+2025-12-10 14:42:17 [INFO] Provided cores: 1 (use --cores to define parallelism)
+2025-12-10 14:42:17 [INFO] Rules claiming more threads will be scaled down.
+2025-12-10 14:42:17 [INFO] Job stats:
+job      count
+-----  -------
+all          1
+total        1
+
+2025-12-10 14:42:17 [INFO] Select jobs to execute...
+2025-12-10 14:42:17 [INFO] Execute 1 jobs...
+2025-12-10 14:42:17 [INFO]  Rule: all, Jobid: 0
+2025-12-10 14:42:17 [INFO] Shell command: None
+2025-12-10 14:42:19 [INFO] Finished jobid: 0 (Rule: all)
+2025-12-10 14:42:19 [INFO] None
+2025-12-10 14:42:19 [INFO] Complete log(s): /home/helene/benchmarks/ob-pipeline-cytof/.snakemake/log/2025-12-10T144216.683207.snakemake.log
+2025-12-10 14:42:19 [INFO] Benchmark run has finished successfully.
+2025-12-11 11:41:28 [INFO] Assuming unrestricted shared filesystem usage.
+2025-12-11 11:41:28 [INFO] None
+2025-12-11 11:41:28 [INFO] host: ubuntu-32gb-nbg1-1
+2025-12-11 11:41:28 [INFO] Building DAG of jobs...
+2025-12-11 11:41:29 [WARNING] Your conda installation is not configured to use strict channel priorities. This is however important for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+2025-12-11 11:41:29 [INFO] Using shell: /usr/bin/bash
+2025-12-11 11:41:29 [INFO] Provided cores: 1 (use --cores to define parallelism)
+2025-12-11 11:41:29 [INFO] Rules claiming more threads will be scaled down.
+2025-12-11 11:41:29 [INFO] Job stats:
+job      count
+-----  -------
+all          1
+total        1
+
+2025-12-11 11:41:29 [INFO] Select jobs to execute...
+2025-12-11 11:41:29 [INFO] Execute 1 jobs...
+2025-12-11 11:41:29 [INFO]  Rule: all, Jobid: 0
+2025-12-11 11:41:29 [INFO] Shell command: None
+2025-12-11 11:41:31 [INFO] Finished jobid: 0 (Rule: all)
+2025-12-11 11:41:31 [INFO] None
+2025-12-11 11:41:31 [INFO] Complete log(s): /home/helene/benchmarks/ob-pipeline-cytof/.snakemake/log/2025-12-11T114128.829789.snakemake.log
+2025-12-11 11:41:31 [INFO] Benchmark run has finished successfully.

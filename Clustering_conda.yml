@@ -118,13 +118,23 @@ stages:
           url: https://github.com/helenewegener1/ob-pipeline-cyanno
           commit: dc467999596c8a0f35250980cae76dc8c1f9807e
         parameters: []
- 
+
+      #- id: gatemeclass
+        #name: "GateMeClass statistical annotation"
+        #software_environment: cran
+        #repository:
+          #url: https://github.com/andreasonnen/gatemeclass
+          #commit: 269bc21964d95479f8301f76baddbc3346310465
+        #parameters:
+          #- values: ["--GMM_parameterization", "V", "--sampling", "0.1", "--k", "20", "--seed", "42"]
+          # - values: ["--GMM_parameterization", "E", "--sampling", "0.2", "--k", "30", "--seed", "42"]
+
       - id: random
         name: "Random"
         software_environment: cran
         repository:
           url: https://github.com/helenewegener1/benchmark_random
-          commit: 91f0d016aaba6c7b146ed5e6d860e2c7939a59b3
+          commit: 8656434404c3b7818262c6074b1602a8bd60c90d
         parameters: []
 
     outputs:
@@ -138,7 +148,7 @@ stages:
         software_environment: "py"
         repository:
           url: https://github.com/helenewegener1/ob-pipeline-metrics
-          commit: 219789546f816de227580142e90d6d7884992e90
+          commit: b57eeb13fb15757e4e4730ce90351c5d329c5ad4
         parameters:
           - values: ["--metric", "all"]
         #  - values: ["--metric", "accuracy"]
