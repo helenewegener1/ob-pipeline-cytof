@@ -1756,3 +1756,230 @@ total        1
 2025-12-11 11:41:31 [INFO] None
 2025-12-11 11:41:31 [INFO] Complete log(s): /home/helene/benchmarks/ob-pipeline-cytof/.snakemake/log/2025-12-11T114128.829789.snakemake.log
 2025-12-11 11:41:31 [INFO] Benchmark run has finished successfully.
+2026-01-17 22:49:56 [INFO] Assuming unrestricted shared filesystem usage.
+2026-01-17 22:49:56 [INFO] None
+2026-01-17 22:49:56 [INFO] host: g-01-c0007
+2026-01-17 22:49:56 [INFO] Building DAG of jobs...
+2026-01-17 22:49:56 [ERROR] WorkflowError:
+Error running conda info. Is conda installed and accessible? Error: Command 'conda info --json' returned non-zero exit status 127.
+2026-01-17 22:49:56 [ERROR] Benchmark run has failed.
+2026-01-17 22:50:55 [INFO] Assuming unrestricted shared filesystem usage.
+2026-01-17 22:50:55 [INFO] None
+2026-01-17 22:50:55 [INFO] host: g-01-c0007
+2026-01-17 22:50:55 [INFO] Building DAG of jobs...
+2026-01-17 22:51:06 [ERROR] CreateCondaEnvironmentException:
+Conda must be version 24.7.1 or later, found version 24.5.0. Please update conda to the latest version. Note that you can also install conda into the snakemake environment without modifying your main conda installation.
+2026-01-17 22:51:06 [ERROR] Benchmark run has failed.
+2026-01-17 22:51:41 [INFO] Assuming unrestricted shared filesystem usage.
+2026-01-17 22:51:41 [INFO] None
+2026-01-17 22:51:41 [INFO] host: g-01-c0007
+2026-01-17 22:51:41 [INFO] Building DAG of jobs...
+2026-01-17 22:51:45 [ERROR] CreateCondaEnvironmentException:
+Conda must be version 24.7.1 or later, found version 24.5.0. Please update conda to the latest version. Note that you can also install conda into the snakemake environment without modifying your main conda installation.
+2026-01-17 22:51:45 [ERROR] Benchmark run has failed.
+2026-01-17 22:52:00 [INFO] Assuming unrestricted shared filesystem usage.
+2026-01-17 22:52:00 [INFO] None
+2026-01-17 22:52:00 [INFO] host: g-01-c0007
+2026-01-17 22:52:00 [INFO] Building DAG of jobs...
+2026-01-17 22:52:05 [ERROR] CreateCondaEnvironmentException:
+Conda must be version 24.7.1 or later, found version 24.5.0. Please update conda to the latest version. Note that you can also install conda into the snakemake environment without modifying your main conda installation.
+2026-01-17 22:52:05 [ERROR] Benchmark run has failed.
+2026-01-17 22:53:13 [INFO] Assuming unrestricted shared filesystem usage.
+2026-01-17 22:53:13 [INFO] None
+2026-01-17 22:53:13 [INFO] host: g-01-c0007
+2026-01-17 22:53:13 [INFO] Building DAG of jobs...
+2026-01-17 22:53:23 [WARNING] Your conda installation is not configured to use strict channel priorities. This is however important for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+2026-01-17 22:53:23 [INFO] Creating conda environment envs/bash.yml...
+2026-01-17 22:53:23 [INFO] Downloading and installing remote packages.
+2026-01-17 22:53:33 [ERROR] CreateCondaEnvironmentException:
+Could not create conda environment from /home/projects/dp_immunoth/people/helweg/projects/benchmarking/ob-pipeline-cytof/envs/bash.yml:
+Command:
+conda env create --quiet --no-default-packages --file "/home/projects/dp_immunoth/people/helweg/projects/benchmarking/ob-pipeline-cytof/.snakemake/conda/6556161364733ed6e352199eaccb2c99_.yaml" --prefix "/home/projects/dp_immunoth/people/helweg/projects/benchmarking/ob-pipeline-cytof/.snakemake/conda/6556161364733ed6e352199eaccb2c99_"
+Output:
+Error while loading conda entry point: conda-anaconda-tos (cannot import name 'validate_core_schema' from 'pydantic_core' (/services/tools/anaconda3/2025.06-1/lib/python3.13/site-packages/pydantic_core/__init__.py))
+Error while loading conda entry point: anaconda-cloud-auth (cannot import name 'validate_core_schema' from 'pydantic_core' (/services/tools/anaconda3/2025.06-1/lib/python3.13/site-packages/pydantic_core/__init__.py))
+Error while loading conda entry point: anaconda-auth (cannot import name 'validate_core_schema' from 'pydantic_core' (/services/tools/anaconda3/2025.06-1/lib/python3.13/site-packages/pydantic_core/__init__.py))
+Channels:
+ - conda-forge
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): ...working... failed
+
+# >>>>>>>>>>>>>>>>>>>>>> ERROR REPORT <<<<<<<<<<<<<<<<<<<<<<
+
+    Traceback (most recent call last):
+      File "/services/tools/anaconda3/2025.06-1/lib/python3.13/site-packages/conda/exception_handler.py", line 28, in __call__
+        return func(*args, **kwargs)
+      File "/services/tools/anaconda3/2025.06-1/lib/python3.13/site-packages/conda/cli/main.py", line 61, in main_subshell
+        exit_code = do_call(args, parser)
+      File "/services/tools/anaconda3/2025.06-1/lib/python3.13/site-packages/conda/cli/conda_argparse.py", line 206, in do_call
+        result = getattr(module, func_name)(args, parser)
+      File "/services/tools/anaconda3/2025.06-1/lib/python3.13/site-packages/conda/notices/core.py", line 132, in wrapper
+        return func(*args, **kwargs)
+      File "/services/tools/anaconda3/2025.06-1/lib/python3.13/site-packages/conda/cli/main_env_create.py", line 188, in execute
+        result[installer_type] = installer.install(
+                                 ~~~~~~~~~~~~~~~~~^
+            prefix, pkg_specs, args, env
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/services/tools/anaconda3/2025.06-1/lib/python3.13/site-packages/conda/env/installers/conda.py", line 51, in install
+        unlink_link_transaction = solver.solve_for_transaction(
+            prune=getattr(args, "prune", False),
+            update_modifier=UpdateModifier.FREEZE_INSTALLED,
+        )
+      File "/services/tools/anaconda3/2025.06-1/lib/python3.13/site-packages/conda/core/solve.py", line 153, in solve_for_transaction
+        unlink_precs, link_precs = self.solve_for_diff(
+                                   ~~~~~~~~~~~~~~~~~~~^
+            update_modifier,
+            ^^^^^^^^^^^^^^^^
+        ...<5 lines>...
+            should_retry_solve,
+            ^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/services/tools/anaconda3/2025.06-1/lib/python3.13/site-packages/conda/core/solve.py", line 222, in solve_for_diff
+        final_precs = self.solve_final_state(
+            update_modifier,
+        ...<4 lines>...
+            should_retry_solve,
+        )
+      File "/services/tools/anaconda3/2025.06-1/lib/python3.13/site-packages/conda_libmamba_solver/solver.py", line 166, in solve_final_state
+        index = self._collect_all_metadata(
+            channels=channels,
+        ...<2 lines>...
+            in_state=in_state,
+        )
+      File "/services/tools/anaconda3/2025.06-1/lib/python3.13/site-packages/conda/common/io.py", line 87, in decorated
+        return f(*args, **kwds)
+      File "/services/tools/anaconda3/2025.06-1/lib/python3.13/site-packages/conda_libmamba_solver/solver.py", line 265, in _collect_all_metadata
+        index = LibMambaIndexHelper(
+            channels=[*conda_build_channels, *channels],
+        ...<6 lines>...
+            pkgs_dirs=context.pkgs_dirs if context.offline else (),
+        )
+      File "/services/tools/anaconda3/2025.06-1/lib/python3.13/site-packages/conda_libmamba_solver/index.py", line 181, in __init__
+        self.repos: list[_ChannelRepoInfo] = self._load_channels()
+                                             ~~~~~~~~~~~~~~~~~~~^^
+      File "/services/tools/anaconda3/2025.06-1/lib/python3.13/site-packages/conda_libmamba_solver/index.py", line 285, in _load_channels
+        urls_to_json_path_and_state = self._fetch_repodata_jsons(tuple(urls_to_channel.keys()))
+      File "/services/tools/anaconda3/2025.06-1/lib/python3.13/site-packages/conda_libmamba_solver/index.py", line 349, in _fetch_repodata_jsons
+        for (url, path, state) in executor.map(self._fetch_one_repodata_json, urls)
+                                  ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/services/tools/anaconda3/2025.06-1/lib/python3.13/concurrent/futures/_base.py", line 619, in result_iterator
+        yield _result_or_cancel(fs.pop())
+              ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+      File "/services/tools/anaconda3/2025.06-1/lib/python3.13/concurrent/futures/_base.py", line 317, in _result_or_cancel
+        return fut.result(timeout)
+               ~~~~~~~~~~^^^^^^^^^
+      File "/services/tools/anaconda3/2025.06-1/lib/python3.13/concurrent/futures/_base.py", line 456, in result
+        return self.__get_result()
+               ~~~~~~~~~~~~~~~~~^^
+      File "/services/tools/anaconda3/2025.06-1/lib/python3.13/concurrent/futures/_base.py", line 401, in __get_result
+        raise self._exception
+      File "/services/tools/anaconda3/2025.06-1/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+        result = self.fn(*self.args, **self.kwargs)
+      File "/services/tools/anaconda3/2025.06-1/lib/python3.13/site-packages/conda_libmamba_solver/index.py", line 375, in _fetch_one_repodata_json
+        json_path, state = subdir_data.repo_fetch.fetch_latest_path()
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+      File "/services/tools/anaconda3/2025.06-1/lib/python3.13/site-packages/conda/gateways/repodata/__init__.py", line 749, in fetch_latest_path
+        _, state = self.fetch_latest()
+                   ~~~~~~~~~~~~~~~~~^^
+      File "/services/tools/anaconda3/2025.06-1/lib/python3.13/site-packages/conda/gateways/repodata/__init__.py", line 847, in fetch_latest
+        raw_repodata = repo.repodata_parsed(cache.state)  # type: ignore
+      File "/services/tools/anaconda3/2025.06-1/lib/python3.13/site-packages/conda/gateways/repodata/jlap/interface.py", line 87, in repodata_parsed
+        repodata_json_or_none = fetch.request_url_jlap_state(
+            repodata_url,
+        ...<3 lines>...
+            temp_path=temp_path,
+        )
+      File "/services/tools/anaconda3/2025.06-1/lib/python3.13/site-packages/conda/gateways/repodata/jlap/fetch.py", line 309, in request_url_jlap_state
+        response = download_and_hash(
+            hasher,
+        ...<5 lines>...
+            is_zst=True,
+        )
+      File "/services/tools/anaconda3/2025.06-1/lib/python3.13/site-packages/conda/gateways/repodata/jlap/fetch.py", line 257, in download_and_hash
+        with writer as repodata:
+             ^^^^^^
+      File "/services/tools/anaconda3/2025.06-1/lib/python3.13/site-packages/conda/gateways/repodata/jlap/fetch.py", line 221, in close
+        self.backing.close()
+        ~~~~~~~~~~~~~~~~~~^^
+    OSError: [Errno 122] Disk quota exceeded
+
+`$ /services/tools/anaconda3/2025.06-1/bin/conda env create --quiet --no-default-packages --file /home/projects/dp_immunoth/people/helweg/projects/benchmarking/ob-pipeline-cytof/.snakemake/conda/6556161364733ed6e352199eaccb2c99_.yaml --prefix /home/projects/dp_immunoth/people/helweg/projects/benchmarking/ob-pipeline-cytof/.snakemake/conda/6556161364733ed6e352199eaccb2c99_`
+
+  environment variables:
+                 CIO_TEST=<not set>
+    CONDA_ALLOW_SOFTLINKS=false
+        CONDA_DEFAULT_ENV=/services/tools/conda_for_gatk/4.1.8.1
+           CONDA_FOR_GATK=/services/tools/conda_for_gatk/4.1.8.1
+             CONDA_PREFIX=/services/tools/conda_for_gatk/4.1.8.1
+    CONDA_PROMPT_MODIFIER=(/services/tools/conda_for_gatk/4.1.8.1)
+               CONDA_ROOT=/services/tools/anaconda3/2025.06-1
+              CONDA_SHLVL=1
+           CURL_CA_BUNDLE=<not set>
+         GTDBTK_DATA_PATH=/home/databases/gtdbtk/release202
+                 INFOPATH=/services/tools/omnibenchmark/0.2.2/share/info
+               LD_PRELOAD=<not set>
+                  MANPATH=/services/tools/anaconda3/2025.06-
+                          1/share/man:/services/tools/omnibenchmark/0.2.2/man:/services/tools/om
+                          nibenchmark/0.2.2/share/man:/services/tools/apptainer/1.4.0/share/man:
+                          :
+               MODULEPATH=/etc/scl/modulefiles:/cm/local/modulefiles:/cm/local/.modulefiles_cach
+                          e/shared/modulefiles:/cm/local/.modulefiles_cache/tools/modulefiles
+                     PATH=/services/tools/anaconda3/2025.06-
+                          1/bin:/services/tools/omnibenchmark/0.2.2/bin:/services/tools/apptaine
+                          r/1.4.0/bin:/services/tools/conda_for_gatk/4.1.8.1/bin:/usr/local/bin:
+                          /usr/share/Modules/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin
+               PBS_O_PATH=/cm/shared/apps/moab/9.1.0.1/sbin:/cm/shared/apps/moab/9.1.0.1/bin:/us
+                          r/local/bin:/usr/share/Modules/bin:/opt/moab/bin:/usr/local/bin:/usr/b
+                          in:/usr/local/sbin:/usr/sbin
+       REQUESTS_CA_BUNDLE=<not set>
+            SSL_CERT_FILE=<not set>
+
+     active environment : /services/tools/conda_for_gatk/4.1.8.1
+    active env location : /services/tools/conda_for_gatk/4.1.8.1
+            shell level : 1
+       user config file : /home/people/helweg/.condarc
+ populated config files : /services/tools/anaconda3/2025.06-1/.condarc
+          conda version : 25.5.1
+    conda-build version : 25.5.0
+         python version : 3.13.5.final.0
+                 solver : libmamba (default)
+       virtual packages : __archspec=1=cascadelake
+                          __conda=25.5.1=0
+                          __glibc=2.28=0
+                          __linux=4.18.0=0
+                          __unix=0=0
+       base environment : /services/tools/anaconda3/2025.06-1  (read only)
+      conda av data dir : /services/tools/anaconda3/2025.06-1/etc/conda
+  conda av metadata url : None
+           channel URLs : https://repo.anaconda.com/pkgs/main/linux-64
+                          https://repo.anaconda.com/pkgs/main/noarch
+                          https://repo.anaconda.com/pkgs/r/linux-64
+                          https://repo.anaconda.com/pkgs/r/noarch
+          package cache : /services/tools/anaconda3/2025.06-1/pkgs
+                          /home/people/helweg/.conda/pkgs
+       envs directories : /home/people/helweg/.conda/envs
+                          /services/tools/anaconda3/2025.06-1/envs
+               platform : linux-64
+             user-agent : conda/25.5.1 requests/2.32.5 CPython/3.13.5 Linux/4.18.0-553.62.1.el8_10.x86_64 rocky/8.10 glibc/2.28 solver/libmamba conda-libmamba-solver/25.4.0 libmambapy/2.0.5 aau/0.7.1 c/. s/. e/.
+                UID:GID : 113800902:1212
+             netrc file : None
+           offline mode : False
+
+
+An unexpected error has occurred. Conda has prepared the above report.
+If you suspect this error is being caused by a malfunctioning plugin,
+consider using the --no-plugins option to turn off plugins.
+
+Example: conda --no-plugins install <package>
+
+Alternatively, you can set the CONDA_NO_PLUGINS environment variable on
+the command line to run the command without plugins enabled.
+
+Example: CONDA_NO_PLUGINS=true conda install <package>
+
+
+2026-01-17 22:53:33 [ERROR] Benchmark run has failed.

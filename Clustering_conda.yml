@@ -8,22 +8,26 @@ storage_api: S3
 storage_bucket_name: clusteringexampleconda
 software_backend: conda
 software_environments:
-  py:
-    description: "clustbench on py3.12.6"
-    conda: envs/py.yml
-    envmodule: py
-  py-old:
-    description: "clustbench on py3.12.6"
-    conda: envs/py-old.yml
-    envmodule: py-old
+  bash:
+    description: "bash"
+    conda: envs/bash.yml
+    envmodule: bash
+  # py:
+  #   description: "clustbench on py3.12.6"
+  #   conda: envs/py.yml
+  #   envmodule: py
+  # py-old:
+  #   description: "clustbench on py3.12.6"
+  #   conda: envs/py-old.yml
+  #   envmodule: py-old
   cran:
     description: "CRAN R environment"
     conda: envs/cran.yml
     envmodule: cran
-  cyanno:
-    description: "CyAnno module environment"
-    conda: envs/cyanno_env.yml
-    envmodule: cyanno
+  # cyanno:
+  #   description: "CyAnno module environment"
+  #   conda: envs/cyanno_env.yml
+  #   envmodule: cyanno
 
 # metric_collectors:
 #   - id: plotting
@@ -40,59 +44,36 @@ software_environments:
 stages:
   ## clustbench data ##########################################################
 
-  - id: data
-    modules:
-      - id: data_import
-        name: "CyTOF dataset from this place http://flowrepository.org/experiments/817/download_ziped_files"
-        software_environment: "py"
-        repository:
-          url: https://github.com/kaae-2/ob-pipeline-data
-          commit: 553727df18bacefb107fd9299136550a159ac1ce
-        parameters:
-          - values: ["--dataset_name", "Levine_13dim", "--transformed", "false"] # works
-          # - values: ["--dataset_name", "Levine_13dim", "--transformed", "true"]
-          # - values: ["--dataset_name", "Levine_32dim", "--transformed", "false"] # works
-          # - values: ["--dataset_name", "Levine_32dim", "--transformed", "true"]
-          # - values: ["--dataset_name", "Mossman_rare", "--transformed", "false"]
-          # - values: ["--dataset_name", "Mossman_rare", "--transformed", "true"]
-          # - values: ["--dataset_name", "Nilsson_rare", "--transformed", "false"]
-          # - values: ["--dataset_name", "Nilsson_rare", "--transformed", "true"]
-          # - values: ["--dataset_name", "Samusik_01", "--transformed", "false"]
-          # - values: ["--dataset_name", "Samusik_01", "--transformed", "true"]
-          # - values: ["--dataset_name", "covid", "--transformed", "true"]
-          # - values: ["--dataset_name", "", "--transformed", "false"] #Template
-          # - values: ["--dataset_name", "FlowCAP_ND", "--transformed", "false"]
-    outputs:
-      - id: data.raw
-        path: "{input}/{stage}/{module}/{params}/{dataset}.data.gz"
-      - id: data.labels
-        path: "{input}/{stage}/{module}/{params}/{dataset}.input_labels.gz"
+
   - id: preprocessing
+
     modules:
       - id: data_preprocessing
-        name: "Data preprocessing for CyTOF datasets"
-        software_environment: "py"
+        software_environment: "bash"
         repository:
           url: https://github.com/helenewegener1/ob-pipeline-preprocessing
-          commit: 3d18fffcb6c7d3780284de8bbfa9d1c456ee16cc
+          commit: 8a0e3d3a0eaa3d4dfc285bd82c3d11d213433589
 
+        # Cross-validation seed
         parameters:
-          - values: ["--seed", 66]
-          # - values: ["--raw_path", "https://raw.githubusercontent.com/kaae-2/ob-flow-datasets/main/data/FlowCAP_WNV.fcs.gz"]
+          - values: ["--data_set", /home/projects/dp_immunoth/data/benchmark_flow/FR-FCM-Z2KP_healthy_final, "--seed", 1]
+    
+    # inputs:
+    #   - id: data_path
+    #     type: folder
+    #     value: "/home/projects/dp_immunoth/data/benchmark_flow/FR-FCM-Z2KP_healthy_final"
 
-    inputs:
-      - entries:
-          - data.raw
-          - data.labels
+    # Outputs (same names, Omnibenchmark will handle separate runs)
     outputs:
-      - id: test.data.matrix
-        path: "{input}/{stage}/{module}/{params}/{dataset}.test.matrix.gz"
-      - id: labels_test
-        path: "{input}/{stage}/{module}/{params}/{dataset}.test.labels.gz"
       - id: train.data.matrix
-        path: "{input}/{stage}/{module}/{params}/{dataset}.train.matrix.gz"
-      - id: labels_train 
-        path: "{input}/{stage}/{module}/{params}/{dataset}.train.labels.gz"
+        path: "{input}/{stage}/{module}/{params}/{dataset}/train_x.zip"
+      - id: labels_train
+        path: "{input}/{stage}/{module}/{params}/{dataset}/train_y.zip"
+      - id: test.data.matrix
+        path: "{input}/{stage}/{module}/{params}/{dataset}/test_x.zip"
+      - id: labels_test
+        path: "{input}/{stage}/{module}/{params}/{dataset}/test_y.zip"
+
 
   - id: analysis
     inputs:
@@ -101,23 +82,32 @@ stages:
           - labels_test
           - train.data.matrix
           - labels_train
+    
     modules:
+    
+      - id: lda
+        name: "LDA"
+        software_environment: cran
+        repository:
+          url: https://github.com/helenewegener1/ob-pipeline-LDA
+          commit: 7d17b7e8f1d864ddd9ede88cb1c5853a3c3f7aed
+        parameters: []
 
-      - id: dgcytof
-        name: "DG-CyTOF"
-        software_environment: py
-        repository:
-          url: https://github.com/helenewegener1/ob-pipeline-dgcytof
-          commit: f28d69b75e9b85f6138ca2646293d3ec10d5a9f9
-        parameters: []
-      
-      - id: cyanno
-        name: "CyAnno annotator"
-        software_environment: cyanno
-        repository:
-          url: https://github.com/helenewegener1/ob-pipeline-cyanno
-          commit: dc467999596c8a0f35250980cae76dc8c1f9807e
-        parameters: []
+      # - id: dgcytof
+      #   name: "DG-CyTOF"
+      #   software_environment: py
+      #   repository:
+      #     url: https://github.com/helenewegener1/ob-pipeline-dgcytof
+      #     commit: f28d69b75e9b85f6138ca2646293d3ec10d5a9f9
+      #   parameters: []
+      # 
+      # - id: cyanno
+      #   name: "CyAnno annotator"
+      #   software_environment: cyanno
+      #   repository:
+      #     url: https://github.com/helenewegener1/ob-pipeline-cyanno
+      #     commit: dc467999596c8a0f35250980cae76dc8c1f9807e
+      #   parameters: []
 
       #- id: gatemeclass
         #name: "GateMeClass statistical annotation"
@@ -129,41 +119,41 @@ stages:
           #- values: ["--GMM_parameterization", "V", "--sampling", "0.1", "--k", "20", "--seed", "42"]
           # - values: ["--GMM_parameterization", "E", "--sampling", "0.2", "--k", "30", "--seed", "42"]
 
-      - id: random
-        name: "Random"
-        software_environment: cran
-        repository:
-          url: https://github.com/helenewegener1/benchmark_random
-          commit: 8656434404c3b7818262c6074b1602a8bd60c90d
-        parameters: []
+      # - id: random
+      #   name: "Random"
+      #   software_environment: cran
+      #   repository:
+      #     url: https://github.com/helenewegener1/benchmark_random
+      #     commit: 8656434404c3b7818262c6074b1602a8bd60c90d
+      #   parameters: []
 
     outputs:
       - id: analysis.prediction
         path: "{input}/{stage}/{module}/{params}/{dataset}_predicted_labels.txt"
-
-  - id: metrics
-    modules:
-      - id: flow_metrics
-        name: "benchmark metrics for flow/cytof data"
-        software_environment: "py"
-        repository:
-          url: https://github.com/helenewegener1/ob-pipeline-metrics
-          commit: b57eeb13fb15757e4e4730ce90351c5d329c5ad4
-        parameters:
-          - values: ["--metric", "all"]
-        #  - values: ["--metric", "accuracy"]
-        #  - values: ["--metric", "precision"]
-        #  - values: ["--metric", "recall"]
-        #  - values: ["--metric", "f1"]
-        #  - values: ["--metric", "f1_score"]
-        #  - values: ["--metric", "runtime"]
-        #  - values: ["--metric", "overlap"]
-        #  - values: ["--metric", "scalability"]
-      #  - values: ["--metric", ""] #Template: Add parameters
-    inputs:
-      - entries:
-          - analysis.prediction
-          - labels_test
-    outputs:
-      - id: metrics.scores
-        path: "{input}/{stage}/{module}/{params}/{dataset}.flow_metrics.json.gz"
+  # 
+  # - id: metrics
+  #   modules:
+  #     - id: flow_metrics
+  #       name: "benchmark metrics for flow/cytof data"
+  #       software_environment: "py"
+  #       repository:
+  #         url: https://github.com/helenewegener1/ob-pipeline-metrics
+  #         commit: b57eeb13fb15757e4e4730ce90351c5d329c5ad4
+  #       parameters:
+  #         - values: ["--metric", "all"]
+  #       #  - values: ["--metric", "accuracy"]
+  #       #  - values: ["--metric", "precision"]
+  #       #  - values: ["--metric", "recall"]
+  #       #  - values: ["--metric", "f1"]
+  #       #  - values: ["--metric", "f1_score"]
+  #       #  - values: ["--metric", "runtime"]
+  #       #  - values: ["--metric", "overlap"]
+  #       #  - values: ["--metric", "scalability"]
+  #     #  - values: ["--metric", ""] #Template: Add parameters
+  #   inputs:
+  #     - entries:
+  #         - analysis.prediction
+  #         - labels_test
+  #   outputs:
+  #     - id: metrics.scores
+  #       path: "{input}/{stage}/{module}/{params}/{dataset}.flow_metrics.json.gz"

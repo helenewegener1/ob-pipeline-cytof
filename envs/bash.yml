@@ -1,0 +1,9 @@
+name: bash_env
+channels:
+  - conda-forge
+dependencies:
+  - bash=5
+  - coreutils       # for head, mktemp, rm, mkdir, printf
+  - gawk             # awk
+  - zip              # zip command
+  - unzip            # optional, in case you need to test ZIP outputs
